@@ -8,6 +8,7 @@ DAY 1:
    3.  Added reset.css file and some basic styles and defined css variables for colors, font-famimly.
    
    ==> Next: set up Gastby
+   
 /*=========================================*/
 
 DAY 2:
