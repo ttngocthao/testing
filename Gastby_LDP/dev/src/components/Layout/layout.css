@@ -1,0 +1,86 @@
+:root {
+  --heading-font: 'Raleway', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  --intro-email-bkg: hsl(217, 28%, 15%);
+  --main-bkg: hsl(218, 28%, 13%);
+  --footer-bkg: hsl(216, 53%, 9%);
+  --testimonials-bkg: hsl(219, 30%, 18%);
+  --cyan-color: hsl(176, 68%, 64%);
+  --blue-color: hsl(198, 60%, 50%);
+  --neutral-color: hsl(0, 0%, 100%);
+}
+
+*,
+html {
+  color: white;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.4;
+}
+
+.diplay-flex {
+  display: flex;
+}
+
+.justify-content__space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.full-width-img {
+  width: 100%;
+}
+
+.vertical-align__b {
+  vertical-align: bottom;
+}
+
+.heading {
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.heading-bold {
+  font-weight: 700;
+}
+
+.heading1 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.body-text {}
+
+.lightBrown-bkg {
+  background-color: hsl(217, 28%, 15%);
+}
+
+.midBrown-bkg {
+  background-color: hsl(218, 28%, 13%);
+}
+
+.darkBrown-bkg {
+  background-color: hsl(216, 53%, 9%);
+}
+
+.paddingVertical-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.paddingVertical-1-2 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.paddingVertical-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

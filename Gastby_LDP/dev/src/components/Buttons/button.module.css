@@ -1,0 +1,12 @@
+.btnWrap {
+  background-color: hsl(198, 60%, 50%);
+
+  background-image: linear-gradient(hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  max-width: 300px;
+  padding: .7rem;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 40px;
+}

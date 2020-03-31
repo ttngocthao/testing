@@ -37,7 +37,7 @@ const featureData = [
 ]
 function FeatureList() {
   return (
-    <section>
+    <section className="midBrown-bkg">
       {featureData &&
         featureData.map((item, indx) => (
           <FeatureCard

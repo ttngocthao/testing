@@ -1,13 +1,13 @@
 import React from "react"
 
-import LogoUrl from "../../public/images/logo.svg"
-import PhoneLogoUrl from "../../public/images/icon-phone.svg"
-import LocationLogoUrl from "../../public/images/icon-location.svg"
-import MailLogoUrl from "../../public/images/icon-email.svg"
+import LogoUrl from "../../../public/images/logo.svg"
+import PhoneLogoUrl from "../../../public/images/icon-phone.svg"
+import LocationLogoUrl from "../../../public/images/icon-location.svg"
+import MailLogoUrl from "../../../public/images/icon-email.svg"
 
 function Footer() {
   return (
-    <footer>
+    <footer className="darkBrown-bkg">
       <figure>
         <img src={LogoUrl} alt="Fylo logo in white" />
       </figure>
@@ -67,17 +67,17 @@ function Footer() {
         <ul>
           <li>
             <a href="#">
-              <i class="fab fa-facebook-f"></i>
+              <i className="fab fa-facebook-f"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fab fa-instagram"></i>
+              <i className="fab fa-instagram"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fab fa-twitter"></i>
+              <i className="fab fa-twitter"></i>
             </a>
           </li>
         </ul>

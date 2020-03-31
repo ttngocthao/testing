@@ -1,0 +1,15 @@
+.headerWrap {
+  padding: 20px 10px;
+}
+
+.logoImgWrap {
+  max-width: 100px;
+  width: 100%;
+  min-width: 80px;
+}
+
+.navList {}
+
+.navItem {
+  padding: 20px 5px;
+}

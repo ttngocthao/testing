@@ -1,6 +1,7 @@
 import React, { Fragment } from "react"
-import Header from "./header"
-import Footer from "./Footer"
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
+import "./layout.css"
 
 function Layout({ ...props }) {
   return (

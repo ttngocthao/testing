@@ -6,7 +6,7 @@ function FeatureCard({ imgAlt, imgUrl, title, bodyText }) {
       <figure>
         <img alt={imgAlt} src={imgUrl} />
       </figure>
-      <h2 class="heading heading-bold">{title}</h2>
+      <h2 className="heading heading-bold">{title}</h2>
       <div>{bodyText}</div>
     </article>
   )
