@@ -15,29 +15,6 @@ DAY 1: Exercise 1 (landing page project)
 DAY 2: Exercise 1 (landing page project)
 
 1. Set up Gatsby for the landing project.
-2. build components: head,SEO,header,footer,cards
+2. build components: head,header,body content,footer,cards
+3. Styled the header, the hero section for mobile
 
-/_=========================================_/
-
-DAY 3: Exercise 2 (Arthaus homepage)
-
-1. work on CSS grids/flex
-
-/_=========================================_/
-
-DAY 4: Exercise 2 (Arthaus site)
-
-1. set up Gatsby for Arthaus site
-
-/_=========================================_/
-
-DAY 5: Exercise 1 (landing page project)
-
-1. hosting service + contact form
-   2.csm headless with contentful?-ex: create a job list.-->connect to job page
-
-/_=========================================_/
-
-DAY 6: Exercise 2 (Arthaus site)
-
-1. CMS headless for Arthaus home page.
