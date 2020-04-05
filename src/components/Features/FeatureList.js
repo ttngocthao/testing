@@ -38,16 +38,18 @@ const featureData = [
 function FeatureList() {
   return (
     <section className="midBrown-bkg">
-      {featureData &&
-        featureData.map((item, indx) => (
-          <FeatureCard
-            key={indx}
-            imgAlt={item.imgAlt}
-            imgUrl={item.imgUrl}
-            title={item.title}
-            bodyText={item.bodyText}
-          />
-        ))}
+      <section className="feature-list padding-vertical--40">
+        {featureData &&
+          featureData.map((item, indx) => (
+            <FeatureCard
+              key={indx}
+              imgAlt={item.imgAlt}
+              imgUrl={item.imgUrl}
+              title={item.title}
+              bodyText={item.bodyText}
+            />
+          ))}
+      </section>
     </section>
   )
 }

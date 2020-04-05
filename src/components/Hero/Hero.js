@@ -8,7 +8,7 @@ import Button from "../Buttons/Button"
 function Hero() {
   return (
     <Fragment>
-      <figure className="lightBrown-bkg">
+      <figure className="lightBrown-bkg padding-horizontal--20">
         <img
           alt="all your files in one rescure loation and accessible anywhere"
           src={IntroImgUrl}

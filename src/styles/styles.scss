@@ -1,16 +1,27 @@
 @import "./components/reset.scss", "./components/variables.scss",
-"./components/header.scss", './components/hero.scss';
+"../components/Header/header.scss", '../components/Hero/hero.scss', './components/link.scss';
+@import './../components/Features/features.scss';
 
 *,
 html {
-  color: white;
+  //color: white;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.4;
+  line-height: 1.5;
+}
+
+p,
+div,
+a {
+  color: white;
 }
 
 .diplay-flex {
   display: flex;
+}
+
+.display-block {
+  display: block;
 }
 
 .justify-content__space-between {
@@ -35,6 +46,7 @@ a {
 
 .heading {
   font-family: $heading-font;
+  color: white;
 }
 
 .heading-bold {
@@ -43,10 +55,13 @@ a {
 
 .heading1 {
   font-size: 1.5rem;
-  line-height: 1.5;
+
 }
 
-.body-text {}
+.heading2 {
+  font-size: 1.2rem;
+}
+
 
 .lightBrown-bkg {
   background-color: $lightBrown;
@@ -60,17 +75,52 @@ a {
   background-color: $darkBrown;
 }
 
-.paddingVertical-1 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.cyan-blue {
+  color: $cyan-color;
 }
 
-.paddingVertical-1-2 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.blue {
+  color: $blue-color;
 }
 
-.paddingVertical-2 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+$paddings: 5,
+10,
+20,
+30,
+40;
+
+@each $num in $paddings {
+  .padding-vertical--#{$num} {
+    padding-top: $num*1px;
+    padding-bottom: $num*1px;
+  }
+
+  .padding-horizontal--#{$num} {
+    padding-left: $num*1px;
+    padding-right: $num*1px;
+  }
+
+  .padding-bottom--#{$num} {
+    padding-bottom: $num*1px;
+  }
+
+  .padding-top--#{$num} {
+    padding-top: $num*1px;
+  }
+
+  .padding-left--#{$num} {
+    padding-left: $num*1px;
+  }
+
+  .padding-right--#{$num} {
+    padding-right: $num*1px;
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px solid;
+}
+
+.border-color--cyan {
+  border-color: $cyan-color;
 }

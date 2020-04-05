@@ -1,0 +1,15 @@
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding-bottom: 40px;
+}
+
+.feature-item {
+  max-width: 280px;
+  text-align: center;
+  padding: 20px 10px;
+}
