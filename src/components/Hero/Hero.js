@@ -4,7 +4,6 @@ import BgCurvyDesktop from "../../../public/images/bg-curvy-desktop.svg"
 import BgCurvyMobile from "../../../public/images/bg-curvy-mobile.svg"
 
 import Button from "../Buttons/Button"
-import styles from "./hero.module.css"
 
 function Hero() {
   return (
@@ -26,14 +25,14 @@ function Hero() {
             className="full-width-img vertical-align__b"
           />
         </figure>
-        <section className={styles.heroText}>
+        <section className="heroText">
           <h1 className="heading heading-bold heading1">
             All your files in one secure location, accessible anywhere
           </h1>
         </section>
       </section>
       <section className="midBrown-bkg">
-        <div className={styles.heroSubText}>
+        <div className="heroSubText">
           <p style={{ position: "relative", paddingBottom: 20 }}>
             Fylo stores all your most important files in one secure loation.
             Access them whenever you need, share and collaborate with friends,

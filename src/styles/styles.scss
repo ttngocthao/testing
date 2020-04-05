@@ -1,20 +1,11 @@
-:root {
-  --heading-font: 'Raleway', sans-serif;
-  --body-font: 'Open Sans', sans-serif;
-  --intro-email-bkg: hsl(217, 28%, 15%);
-  --main-bkg: hsl(218, 28%, 13%);
-  --footer-bkg: hsl(216, 53%, 9%);
-  --testimonials-bkg: hsl(219, 30%, 18%);
-  --cyan-color: hsl(176, 68%, 64%);
-  --blue-color: hsl(198, 60%, 50%);
-  --neutral-color: hsl(0, 0%, 100%);
-}
+@import "./components/reset.scss", "./components/variables.scss",
+"./components/header.scss", './components/hero.scss';
 
 *,
 html {
   color: white;
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.4;
 }
 
@@ -43,8 +34,7 @@ a {
 }
 
 .heading {
-  font-family: 'Raleway', sans-serif;
-
+  font-family: $heading-font;
 }
 
 .heading-bold {
@@ -59,15 +49,15 @@ a {
 .body-text {}
 
 .lightBrown-bkg {
-  background-color: hsl(217, 28%, 15%);
+  background-color: $lightBrown;
 }
 
 .midBrown-bkg {
-  background-color: hsl(218, 28%, 13%);
+  background-color: $midBrown;
 }
 
 .darkBrown-bkg {
-  background-color: hsl(216, 53%, 9%);
+  background-color: $darkBrown;
 }
 
 .paddingVertical-1 {

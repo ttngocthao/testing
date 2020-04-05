@@ -5,5 +5,32 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Gatsby React front end",
+    titleTemplate: "%s · The Real Hero",
+    description: "Thao Truong developed, working at Arthaus Communication Ltd",
+    url: "https://www.thaotruong.uk", // No trailing slash allowed!
+    image: "/images/favicon.icon", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@ttngocthao",
+  },
+  plugins: [
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: "Open Sans",
+            variants: ["400", "700"],
+          },
+          {
+            family: "Raleway",
+            //subsets: [`latin`]
+            variants: ["400", "700"],
+          },
+        ],
+      },
+    },
+    { resolve: "gatsby-plugin-sass" },
+    { resolve: "gatsby-plugin-react-helmet" },
+  ],
 }

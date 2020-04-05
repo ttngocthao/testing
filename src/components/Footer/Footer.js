@@ -4,6 +4,12 @@ import LogoUrl from "../../../public/images/logo.svg"
 import PhoneLogoUrl from "../../../public/images/icon-phone.svg"
 import LocationLogoUrl from "../../../public/images/icon-location.svg"
 import MailLogoUrl from "../../../public/images/icon-email.svg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faFacebookF,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons"
 
 function Footer() {
   return (
@@ -67,17 +73,17 @@ function Footer() {
         <ul>
           <li>
             <a href="#">
-              <i className="fab fa-facebook-f"></i>
+              <FontAwesomeIcon icon={faFacebookF} />
             </a>
           </li>
           <li>
             <a href="#">
-              <i className="fab fa-instagram"></i>
+              <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
           <li>
             <a href="#">
-              <i className="fab fa-twitter"></i>
+              <FontAwesomeIcon icon={faTwitter} />
             </a>
           </li>
         </ul>
