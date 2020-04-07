@@ -1,5 +1,6 @@
 import React from "react"
 import TestimonyCard from "./TestimonyCard"
+import { graphql } from "gatsby"
 const testimonyData = [
   {
     name: "Saltish Pastel",
@@ -42,3 +43,28 @@ function TestimonyList() {
 }
 
 export default TestimonyList
+// export const query = graphql`
+//   query {
+//     profile1: file(relativePath: { eq: "images/profile-1.jpg" }) {
+//       childImageSharp {
+//         fluid(maxWidth: 40) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//     profile2: file(relativePath: { eq: "images/profile-2.jpg" }) {
+//       childImageSharp {
+//         fluid(maxWidth: 40) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//     profile3: file(relativePath: { eq: "images/profile-3.jpg" }) {
+//       childImageSharp {
+//         fluid(maxWidth: 40) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//   }
+// `

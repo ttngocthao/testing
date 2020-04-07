@@ -3,6 +3,10 @@ import IntroImgUrl from "../../../public/images/illustration-intro.png"
 import BgCurvyDesktop from "../../../public/images/bg-curvy-desktop.svg"
 import BgCurvyMobile from "../../../public/images/bg-curvy-mobile.svg"
 
+//for the image
+import Img from "gatsby-image"
+import { graphql } from "gatsby"
+
 import Button from "../Buttons/Button"
 
 function Hero() {

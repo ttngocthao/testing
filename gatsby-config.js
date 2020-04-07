@@ -32,5 +32,8 @@ module.exports = {
     },
     { resolve: "gatsby-plugin-sass" },
     { resolve: "gatsby-plugin-react-helmet" },
+    { resolve: "gatsby-transformer-sharp" },
+    { resolve: "gatsby-plugin-sharp" },
+    { resolve: `gatsby-source-filesystem`, options: { path: `./src/data/` } },
   ],
 }
