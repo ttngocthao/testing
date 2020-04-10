@@ -5,7 +5,7 @@ import LogoUrl from "../../../public/images/logo.svg"
 function Header() {
   return (
     <header className="lightBrown-bkg">
-      <nav className="diplay-flex justify-content__space-between align-center headerWrap">
+      <nav className="display-flex justify-content__space-between align-center headerWrap">
         <figure className="logoImgWrap">
           <img
             src={LogoUrl}
@@ -13,7 +13,7 @@ function Header() {
             className="full-width-img"
           />
         </figure>
-        <ul className="diplay-flex">
+        <ul className="display-flex">
           <li className="navItem">
             <a href="#">Features</a>
           </li>

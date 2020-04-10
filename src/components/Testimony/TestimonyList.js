@@ -1,35 +1,20 @@
 import React from "react"
 import TestimonyCard from "./TestimonyCard"
-import { graphql } from "gatsby"
-const testimonyData = [
-  {
-    name: "Saltish Pastel",
-    role: "Founder & CEO, Huddle",
-    text:
-      "Fylo has improved our team productivity by an order of magnitude.  Since making the switch our team has become a well-oiled collaboration machine.",
-    imgUrl: require("../../../public/images/profile-1.jpg"),
-  },
-  {
-    name: "Bruce McKenzie",
-    role: "Founder & CEO, Huddle",
-    text:
-      "Fylo has improved our team productivity by an order of magnitude.  Since making the switch our team has become a well-oiled collaboration machine.",
-    imgUrl: require("../../../public/images/profile-2.jpg"),
-  },
-  {
-    name: "Iva Boyd",
-    role: "Founder & CEO, Huddle",
+import { PROFILES } from "../../data/profile.data"
+import QuoteImg from "../../images/bg-quotes.png"
 
-    text:
-      "Fylo has improved our team productivity by an order of magnitude.  Since making the switch our team has become a well-oiled collaboration machine.",
-    imgUrl: require("../../../public/images/profile-3.jpg"),
-  },
-]
 function TestimonyList() {
   return (
-    <section className="midBrown-bkg">
-      {testimonyData &&
-        testimonyData.map((item, indx) => (
+    <section className="midBrown-bkg profile-list">
+      <figure className="quote-img padding-top--40">
+        <img
+          src={QuoteImg}
+          alt="double quote icon"
+          className="full-width-img"
+        />
+      </figure>
+      {PROFILES &&
+        PROFILES.map((item, indx) => (
           <TestimonyCard
             key={indx}
             name={item.name}

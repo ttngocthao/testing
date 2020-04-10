@@ -1,5 +1,5 @@
 import React from "react"
-import productiveImgUrl from "../../../public/images/illustration-stay-productive.png"
+import productiveImgUrl from "../../images/illustration-stay-productive.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 function CardWImg() {

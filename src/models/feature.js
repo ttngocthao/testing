@@ -1,8 +1,9 @@
 class Feature {
-  constructor(imageUrl, title, text) {
-    this.imageUrl = imageUrl
+  constructor(imgAlt, imgUrl, title, bodyText) {
+    this.imgAlt = imgAlt
+    this.imgUrl = imgUrl
     this.title = title
-    this.text = text
+    this.bodyText = bodyText
   }
 }
 export default Feature

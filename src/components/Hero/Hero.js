@@ -1,11 +1,7 @@
 import React, { Fragment } from "react"
-import IntroImgUrl from "../../../public/images/illustration-intro.png"
-import BgCurvyDesktop from "../../../public/images/bg-curvy-desktop.svg"
-import BgCurvyMobile from "../../../public/images/bg-curvy-mobile.svg"
-
-//for the image
-import Img from "gatsby-image"
-import { graphql } from "gatsby"
+import IntroImgUrl from "../../images/illustration-intro.png"
+import BgCurvyDesktop from "../../images/bg-curvy-desktop.svg"
+import BgCurvyMobile from "../../images/bg-curvy-mobile.svg"
 
 import Button from "../Buttons/Button"
 

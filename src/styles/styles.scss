@@ -1,6 +1,8 @@
 @import "./components/reset.scss", "./components/variables.scss",
 "../components/Header/header.scss", '../components/Hero/hero.scss', './components/link.scss';
 @import './../components/Features/features.scss';
+@import './../components/Testimony/testimony.scss';
+@import './../components/StartForm/start-form.scss';
 
 *,
 html {
@@ -16,7 +18,7 @@ a {
   color: white;
 }
 
-.diplay-flex {
+.display-flex {
   display: flex;
 }
 
@@ -62,6 +64,17 @@ a {
   font-size: 1.2rem;
 }
 
+.text--small {
+  font-size: 14px;
+}
+
+.text--xsmall {
+  font-size: 11px;
+}
+
+.text--center {
+  text-align: center;
+}
 
 .lightBrown-bkg {
   background-color: $lightBrown;
@@ -69,6 +82,10 @@ a {
 
 .midBrown-bkg {
   background-color: $midBrown;
+}
+
+.midBrown2-bkg {
+  background-color: $midBrown2;
 }
 
 .darkBrown-bkg {

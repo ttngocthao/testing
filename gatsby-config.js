@@ -35,5 +35,9 @@ module.exports = {
     { resolve: "gatsby-transformer-sharp" },
     { resolve: "gatsby-plugin-sharp" },
     { resolve: `gatsby-source-filesystem`, options: { path: `./src/data/` } },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { path: `./src/images` },
+    },
   ],
 }
