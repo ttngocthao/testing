@@ -33,7 +33,7 @@ const topBarItems = [
   },
 ]
 const midBarItems = [
-  { title: "About Us", url: "/about", listNo: 1 },
+  { title: "About Us", url: "/", listNo: 1 },
   { title: "Jobs", url: "/jobs", listNo: 1 },
   { title: "Press", url: "/", listNo: 1 },
   { title: "Blog", url: "/", listNo: 1 },
