@@ -4,27 +4,8 @@ import LogoUrl from "../../../public/images/logo.svg"
 
 function Header() {
   return (
-    <header className="lightBrown-bkg">
-      <nav className="display-flex justify-content__space-between align-center headerWrap">
-        <figure className="logoImgWrap">
-          <img
-            src={LogoUrl}
-            alt="Fylo logo in white"
-            className="full-width-img"
-          />
-        </figure>
-        <ul className="display-flex">
-          <li className="navItem">
-            <a href="/">Features</a>
-          </li>
-          <li className="navItem">
-            <a href="/">Team</a>
-          </li>
-          <li className="navItem">
-            <a href="/">Sign In</a>
-          </li>
-        </ul>
-      </nav>
+    <header>
+      <h3>This is header</h3>
     </header>
   )
 }

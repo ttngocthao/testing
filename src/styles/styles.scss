@@ -1,11 +1,8 @@
 @import "./components/reset.scss", "./components/variables.scss",
-"../components/Header/header.scss", '../components/Hero/hero.scss', './components/link.scss';
-@import './../components/Features/features.scss';
-@import './../components/Testimony/testimony.scss';
-@import './../components/StartForm/startForm.scss';
+"../components/Header/header.scss", './components/link.scss';
+
 @import './../components/Footer/footer.scss';
 @import './../components/Buttons/button.scss';
-@import './../components/Cards/card-w-img.scss';
 
 *,
 html {
@@ -18,7 +15,7 @@ html {
 p,
 div,
 a {
-  color: white;
+  //color: white;
 }
 
 .display-flex {
