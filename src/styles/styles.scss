@@ -1,6 +1,6 @@
 @import "./components/reset.scss";
 @import "./components/variables.scss";
-@import "../components/Header/header.scss";
+@import "./../components/Header/header.scss";
 @import './../components/Footer/footer.scss';
 @import './../components/SocialMediaIcon/social-icon.scss';
 
@@ -11,6 +11,7 @@ html {
   font-family: "Lato", sans-serif;
   line-height: 1.5;
   box-sizing: border-box;
+  font-weight: 300;
 }
 
 body {
@@ -44,6 +45,10 @@ p {
   align-items: center;
 }
 
+.align-end {
+  align-items: flex-end;
+}
+
 a {
   text-decoration: none;
 
@@ -58,11 +63,6 @@ a {
 }
 
 
-
-.heading {
-  font-family: $heading-font;
-  color: white;
-}
 
 
 
