@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 
 import Layout from "../components/Layout/Layout"
 import FeatureList from "../components/Features/FeatureList"

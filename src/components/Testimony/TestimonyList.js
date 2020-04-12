@@ -1,28 +1,23 @@
 import React from "react"
 import TestimonyCard from "./TestimonyCard"
 import { PROFILES } from "../../data/profile.data"
-import QuoteImg from "../../images/bg-quotes.png"
 
 function TestimonyList() {
   return (
-    <section className="midBrown-bkg profile-list">
-      <figure className="quote-img padding-top--40">
-        <img
-          src={QuoteImg}
-          alt="double quote icon"
-          className="full-width-img"
-        />
-      </figure>
-      {PROFILES &&
-        PROFILES.map((item, indx) => (
-          <TestimonyCard
-            key={indx}
-            name={item.name}
-            role={item.role}
-            text={item.text}
-            imgUrl={item.imgUrl}
-          />
-        ))}
+    <section className="midBrown-bkg">
+      <section className="midBrown-bkg profile-list">
+        {PROFILES &&
+          PROFILES.map((item, indx) => (
+            <TestimonyCard
+              key={indx}
+              indx={indx}
+              name={item.name}
+              role={item.role}
+              text={item.text}
+              imgUrl={item.imgUrl}
+            />
+          ))}
+      </section>
     </section>
   )
 }

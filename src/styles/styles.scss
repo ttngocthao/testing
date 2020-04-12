@@ -2,7 +2,10 @@
 "../components/Header/header.scss", '../components/Hero/hero.scss', './components/link.scss';
 @import './../components/Features/features.scss';
 @import './../components/Testimony/testimony.scss';
-@import './../components/StartForm/start-form.scss';
+@import './../components/StartForm/startForm.scss';
+@import './../components/Footer/footer.scss';
+@import './../components/Buttons/button.scss';
+@import './../components/Cards/card-w-img.scss';
 
 *,
 html {
@@ -104,7 +107,8 @@ $paddings: 5,
 10,
 20,
 30,
-40;
+40,
+60;
 
 @each $num in $paddings {
   .padding-vertical--#{$num} {
@@ -131,6 +135,11 @@ $paddings: 5,
 
   .padding-right--#{$num} {
     padding-right: $num*1px;
+  }
+
+  .margin-vertical--#{$num} {
+    margin-top: $num*1px;
+    margin-bottom: $num*1px;
   }
 }
 

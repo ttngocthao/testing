@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+
 import LogoUrl from "../../../public/images/logo.svg"
 
 function Header() {
@@ -15,13 +15,13 @@ function Header() {
         </figure>
         <ul className="display-flex">
           <li className="navItem">
-            <a href="#">Features</a>
+            <a href="/">Features</a>
           </li>
           <li className="navItem">
-            <a href="#">Team</a>
+            <a href="/">Team</a>
           </li>
           <li className="navItem">
-            <a href="#">Sign In</a>
+            <a href="/">Sign In</a>
           </li>
         </ul>
       </nav>

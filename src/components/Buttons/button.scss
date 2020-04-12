@@ -1,4 +1,4 @@
-.btnWrap {
+.btn-wrap {
   background-color: hsl(198, 60%, 50%);
 
   background-image: linear-gradient(hsl(176, 68%, 64%), hsl(198, 60%, 50%));
@@ -6,8 +6,14 @@
   font-family: 'Raleway', sans-serif;
   max-width: 300px;
   padding: .7rem;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   border-radius: 40px;
   text-align: center;
+  box-sizing: border-box;
+
+  @media only screen and (min-width:$midSizeDevices) {
+    max-width: 200px;
+    margin: 0;
+  }
 }

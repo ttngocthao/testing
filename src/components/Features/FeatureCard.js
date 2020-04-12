@@ -1,9 +1,9 @@
-import React, { Children } from "react"
+import React from "react"
 
 function FeatureCard({ imgAlt, imgUrl, title, bodyText }) {
   return (
     <article className="feature-item">
-      <figure className="padding-vertical--30">
+      <figure className="padding-vertical--30 feature-item__icon">
         <img alt={imgAlt} src={imgUrl} />
       </figure>
       <h2 className="heading heading-bold heading2 padding-vertical--10">

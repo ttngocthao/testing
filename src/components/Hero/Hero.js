@@ -8,15 +8,18 @@ import Button from "../Buttons/Button"
 function Hero() {
   return (
     <Fragment>
-      <figure className="lightBrown-bkg padding-horizontal--20">
-        <img
-          alt="all your files in one rescure loation and accessible anywhere"
-          src={IntroImgUrl}
-          className="full-width-img"
-        />
-      </figure>
+      <section className="lightBrown-bkg">
+        <figure className="lightBrown-bkg padding-horizontal--20 hero-img--figure">
+          <img
+            alt="all your files in one rescure loation and accessible anywhere"
+            src={IntroImgUrl}
+            className="full-width-img"
+          />
+        </figure>
+      </section>
+
       <section className="lightBrown-bkg" style={{ position: "relative" }}>
-        <figure>
+        <figure className="curvy-img--figure">
           <img
             srcSet={`${BgCurvyMobile} 375w,${BgCurvyDesktop} 1440w`}
             sizes="(max-width:600px) 375px,1440px"

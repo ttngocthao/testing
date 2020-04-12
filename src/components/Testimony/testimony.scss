@@ -1,5 +1,14 @@
 .quote-img {
   max-width: 30px;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+.quote-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
 }
 
 .profile-wrap {
@@ -10,7 +19,15 @@
   font-size: 14px;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(77, 77, 77, 0.3);
+  position: relative;
+  // width: 100%;
+
+  @media only screen and (min-width:$midSizeDevices) {
+    max-width: 300px;
+
+  }
 }
+
 
 .profile-img {
   width: 30px;
@@ -20,5 +37,14 @@
 }
 
 .profile-list {
-  padding: 40px 20px;
+  padding: 0px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media only screen and (min-width:$midSizeDevices) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 60px;
+  }
 }

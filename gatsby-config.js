@@ -30,7 +30,12 @@ module.exports = {
         ],
       },
     },
-    { resolve: "gatsby-plugin-sass" },
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        useResolveUrlLoader: true,
+      },
+    },
     { resolve: "gatsby-plugin-react-helmet" },
     { resolve: "gatsby-transformer-sharp" },
     { resolve: "gatsby-plugin-sharp" },
