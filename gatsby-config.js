@@ -6,12 +6,16 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby React front end",
-    titleTemplate: "%s · The Real Hero",
-    description: "Thao Truong developed, working at Arthaus Communication Ltd",
-    url: "https://www.thaotruong.uk", // No trailing slash allowed!
+    title: "Arthaus Visual Communications Ltd",
+    titleTemplate: "Arthaus Visual Communications Ltd",
+    description:
+      "We're a multimedia design agency that specializes in brand development and creative communications. We work with some of the world's leading companies, where our unique blend of creativity and technical capability enables us to generate solutions that engage, inspire and help drive business growth.",
+    url: "https://www.arthaus.co.uk", // No trailing slash allowed!
     image: "/images/favicon.icon", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@ttngocthao",
+    twitterUsername: "ArtHaus",
+    facebookUsername: "ArtHaus.design",
+    instagramUsername: "arthaus_design",
+    linkedInUsername: "arthaus-visual-communications-",
   },
   plugins: [
     {
@@ -19,13 +23,9 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: "Open Sans",
-            variants: ["400", "700"],
-          },
-          {
-            family: "Raleway",
+            family: "Lato",
             //subsets: [`latin`]
-            variants: ["400", "700"],
+            variants: ["300", "400", "700", "900"],
           },
         ],
       },

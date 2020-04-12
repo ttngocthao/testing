@@ -7,7 +7,7 @@ export default () => {
   return (
     <Layout>
       <SEO />
-      <h1>This is home page</h1>
+      <h1 className="heading1">This is home page</h1>
     </Layout>
   )
 }
