@@ -1,7 +1,5 @@
 import React from "react"
 
-import LogoUrl from "../../../public/images/logo.svg"
-
 function Header() {
   return (
     <header>
