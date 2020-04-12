@@ -84,12 +84,12 @@ function Footer() {
               socialMediaItems.map((item, index) => {
                 return (
                   <li key={index} className="media-item">
-                    <Link to={item.url}>
+                    <a to={item.url}>
                       <FontAwesomeIcon
                         icon={item.iconUrl}
                         className="media-icon"
                       />
-                    </Link>
+                    </a>
                   </li>
                 )
               })}
