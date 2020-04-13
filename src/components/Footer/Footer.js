@@ -33,14 +33,14 @@ const socialMediaItems = [
 const topBarItems = [
   {
     imgUrl: LocationLogoUrl,
-    altUrl: "location icon",
+    imgAlt: "location icon",
     text:
       " Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Voluptates, quisquam similique eum assumenda.",
   },
-  { imgUrl: PhoneLogoUrl, altUrl: "phone icon", text: "+1-543-123-4567" },
+  { imgUrl: PhoneLogoUrl, imgAlt: "phone icon", text: "+1-543-123-4567" },
   {
     imgUrl: MailLogoUrl,
-    altUrl: "contact email address",
+    imgAlt: "contact email address",
     text: "example@fylo.com",
   },
 ]
@@ -76,7 +76,7 @@ function Footer() {
                 <FooterTopItem
                   key={indx}
                   imgUrl={item.imgUrl}
-                  altUrl={item.altUrl}
+                  imgAlt={item.imgAlt}
                   text={item.text}
                 />
               )
