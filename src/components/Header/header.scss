@@ -59,6 +59,14 @@
 
 .menu-list {
   text-align: center;
+  height: 0;
+  opacity: 0;
+  transition: height .5s;
+}
+
+.menu-list--show {
+  height: auto;
+  opacity: 1;
 }
 
 .menu-item {

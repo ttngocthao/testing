@@ -13,11 +13,12 @@
   @media (min-width: $viewpoint1) {
     max-width: 800px;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax($gridHeightXL, auto);
 
   }
 
   @media (min-width: $viewpoint2) {
-    max-width: 1200px;
+    max-width: 1000px;
     grid-template-columns: repeat(5, 1fr);
 
   }
@@ -25,6 +26,9 @@
 
 .plus-circle--icon {
   opacity: .5;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 .box {
@@ -34,12 +38,27 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+
+  @media only screen and (min-width: $viewpoint2) {
+    min-height: $gridHeightXL;
+  }
+}
+
+.box-link {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .type-b,
 .type-c {
   min-height: $gridHeight*2;
   height: 100%;
+
+  @media only screen and (min-width: $viewpoint2) {
+    min-height: $gridHeightXL*2;
+  }
 }
 
 #item-1 {
@@ -255,4 +274,14 @@
     grid-column: 2 / span 2;
     grid-row: 7 / span 2;
   }
+}
+
+.title-wrap {
+  padding: 10px;
+}
+
+.title-wrap--bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }

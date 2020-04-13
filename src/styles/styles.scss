@@ -9,7 +9,7 @@
 html {
 
   font-size: 16px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato-Light", sans-serif;
   line-height: 1.2 !important;
   box-sizing: border-box;
   font-weight: 300;
@@ -55,6 +55,7 @@ a {
 
   &:hover {
     text-decoration: underline;
+    color: white;
   }
 }
 
@@ -68,6 +69,7 @@ a {
 
 
 .heading1 {
+  font-family: 'Lato-Black';
   font-size: 40px;
   font-weight: 900;
 
@@ -95,7 +97,7 @@ a {
 }
 
 .text--bold {
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .text--center {

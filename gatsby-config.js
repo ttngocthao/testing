@@ -18,18 +18,18 @@ module.exports = {
     linkedInUsername: "arthaus-visual-communications-",
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: "Lato",
-            //subsets: [`latin`]
-            variants: ["300", "400", "700", "900"],
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: "Lato",
+    //         //subsets: [`latin`]
+    //         variants: ["300", "400", "700", "900"],
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-sass",
       options: {
@@ -43,6 +43,21 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: { path: `./src/images` },
+    },
+    {
+      resolve: "gatsby-plugin-html-attributes",
+      options: {
+        lang: "en",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Lato-Reg,Lato-Light,Lato-Black"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
     },
   ],
 }

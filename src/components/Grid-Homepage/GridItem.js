@@ -1,13 +1,22 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons"
 function GridItem({ itemData }) {
-  const { type, id, text, subText, imgUrl, linkUrl, color } = itemData
+  const {
+    type,
+    id,
+    text,
+    subText,
+    imgUrl,
+    linkUrl,
+    color,
+    textAtBottom,
+  } = itemData
   const textWrap = (
-    <Fragment>
+    <div className={textAtBottom ? "title-wrap--bottom" : "title-wrap"}>
       <h2 className="text--white text--bold">{text}</h2>
       {subText && <h3 className="text--white text--bold">{subText}</h3>}
-    </Fragment>
+    </div>
   )
   return (
     <div
@@ -17,7 +26,7 @@ function GridItem({ itemData }) {
     >
       {/* if there is linkUrl render anchor tag outside the textwrap,if not render textwrap only */}
       {linkUrl ? (
-        <a href={linkUrl}>
+        <a href={linkUrl} className="box-link">
           <span className="sr-only">${linkUrl}</span>
           {textWrap}
           <FontAwesomeIcon
