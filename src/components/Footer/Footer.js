@@ -14,9 +14,21 @@ import FooterTopItem from "./FooterTopItem"
 import { Link } from "gatsby"
 
 const socialMediaItems = [
-  { iconUrl: faFacebookF, url: "https://www.facebook.com/ttngocthao" },
-  { iconUrl: faInstagram, url: "https://www.instagram.com/ttngocthao/" },
-  { iconUrl: faTwitter, url: "https://twitter.com/ThaoTruong203" },
+  {
+    iconUrl: faFacebookF,
+    url: "https://www.facebook.com/ttngocthao",
+    linkName: "facebook link",
+  },
+  {
+    iconUrl: faInstagram,
+    url: "https://www.instagram.com/ttngocthao/",
+    linkName: "instagram link",
+  },
+  {
+    iconUrl: faTwitter,
+    url: "https://twitter.com/ThaoTruong203",
+    linkName: "twitter link",
+  },
 ]
 const topBarItems = [
   {
@@ -85,6 +97,7 @@ function Footer() {
                 return (
                   <li key={index} className="media-item">
                     <a href={item.url}>
+                      <span class="sr-only">{item.linkName}</span>
                       <FontAwesomeIcon
                         icon={item.iconUrl}
                         className="media-icon"
