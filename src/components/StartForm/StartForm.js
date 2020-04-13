@@ -7,17 +7,24 @@ function StartForm() {
         <h2 className="heading heading2 heading-bold text--center padding-vertical--20">
           Get early access today
         </h2>
-        <div className="text--center padding-horizontal--40">
+        <div className="text--center">
           It only takes a minute to sign up and our free starter tier is
           extremely generous. If you have any questions, our support team would
           be happy to help you.
         </div>
         <div className="button-list padding-top--20">
-          <div className="input-wrap">
-            <input type="text" placeholder="email@example.com" />
-          </div>
-
-          <Button>Get Started For Free</Button>
+          <label className="input-wrap" for="email">
+            <input type="text" id="email" placeholder="email@example.com" />
+          </label>
+          <label className="input-wrap" for="submit">
+            <input
+              type="submit"
+              className="btn-wrap"
+              value="Get Started For Free"
+              id="submit"
+            />
+          </label>
+          {/* <Button>Get Started For Free</Button> */}
         </div>
       </form>
     </section>

@@ -6,8 +6,8 @@ function TestimonyCard({ indx, name, role, text, imgUrl }) {
       {indx === 0 && (
         <figure className="quote-img">
           <img
-            src={QuoteImg}
             alt="double quote icon"
+            src={QuoteImg}
             className="full-width-img"
           />
         </figure>

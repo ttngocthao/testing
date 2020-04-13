@@ -21,10 +21,10 @@ function Hero() {
       <section className="lightBrown-bkg" style={{ position: "relative" }}>
         <figure className="curvy-img--figure">
           <img
+            alt="curvy background in black"
             srcSet={`${BgCurvyMobile} 375w,${BgCurvyDesktop} 1440w`}
             sizes="(max-width:600px) 375px,1440px"
             src={BgCurvyDesktop}
-            alt="curvy background in black"
             className="full-width-img vertical-align__b"
           />
         </figure>

@@ -19,8 +19,8 @@ function PageNotFound() {
         </h1>
         <figure style={{ width: "100%", height: "100%" }}>
           <img
-            src={Img}
             alt="black cat on black background"
+            src={Img}
             className="full-width-img"
           />
         </figure>

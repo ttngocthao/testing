@@ -8,8 +8,8 @@ function Header() {
       <nav className="display-flex justify-content__space-between align-center headerWrap">
         <figure className="logoImgWrap">
           <img
-            src={LogoUrl}
             alt="Fylo logo in white"
+            src={LogoUrl}
             className="full-width-img"
           />
         </figure>

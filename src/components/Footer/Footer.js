@@ -54,7 +54,7 @@ function Footer() {
   return (
     <footer className="darkBrown-bkg padding-top--40 padding-horizontal--20">
       <figure>
-        <img src={LogoUrl} alt="Fylo logo in white" />
+        <img alt="Fylo logo in white" src={LogoUrl} />
       </figure>
       <section className="footer__bars-wrap">
         <ul className="padding-vertical--40 footer__top-bar">

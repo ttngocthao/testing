@@ -8,8 +8,8 @@ function CardWImg() {
       <section className="midBrown-bkg padding-vertical--40 padding-horizontal--20 card-img-wrap">
         <figure className="padding-vertical--40 card-img--figure">
           <img
-            src={productiveImgUrl}
             alt="illustration of staying productive whenever you are"
+            src={productiveImgUrl}
             className="full-width-img"
           />
         </figure>

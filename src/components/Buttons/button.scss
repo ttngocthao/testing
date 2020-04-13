@@ -1,6 +1,6 @@
 .btn-wrap {
   background-color: hsl(198, 60%, 50%);
-
+  color: white;
   background-image: linear-gradient(hsl(176, 68%, 64%), hsl(198, 60%, 50%));
   font-weight: bold;
   font-family: 'Raleway', sans-serif;
@@ -12,7 +12,7 @@
   text-align: center;
   box-sizing: border-box;
 
-  @media only screen and (min-width:$midSizeDevices) {
+  @media only screen and (min-width:$largeSizeDevices) {
     max-width: 200px;
 
   }

@@ -57,13 +57,21 @@ input[type='text']::placeholder {
   padding-bottom: 30px;
   max-width: 300px;
   margin: 0 auto;
+  display: block;
+  width: 100%;
 
-  @media only screen and (min-width: $midSizeDevices) {
+  @media only screen and (min-width: $largeSizeDevices) {
     padding: 0;
     width: 100%;
     // background-color: cyan;
     max-width: 400px;
+    display: inline-block;
   }
+
+}
+
+.input-wrap[for='submit'] {
+  max-width: 200px;
 }
 
 .button-list {
