@@ -1,0 +1,258 @@
+.grid-layout {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
+  min-width: 270px;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-auto-rows: minmax($gridHeight, auto);
+
+  @media (min-width: $viewpoint1) {
+    max-width: 800px;
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
+  @media (min-width: $viewpoint2) {
+    max-width: 1200px;
+    grid-template-columns: repeat(5, 1fr);
+
+  }
+}
+
+.plus-circle--icon {
+  opacity: .5;
+}
+
+.box {
+  display: inline-block;
+  min-height: $gridHeight;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.type-b,
+.type-c {
+  min-height: $gridHeight*2;
+  height: 100%;
+}
+
+#item-1 {
+  grid-column: 1/ span 2;
+  grid-row: 1 / span 1;
+
+}
+
+#item-2 {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+
+}
+
+#item-3 {
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 2;
+
+  @media (min-width: $viewpoint1) {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 2;
+  }
+
+  @media(min-width: $viewpoint2) {
+    grid-row: 3/ span 2;
+  }
+}
+
+#item-4 {
+  grid-column: 2 /span 1;
+  grid-row: 4 / span 1;
+
+  @media (min-width: $viewpoint1) {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  @media (min-width: $viewpoint2) {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+}
+
+#item-5 {
+  grid-column: 2 /span 1;
+  grid-row: 5 / span 1;
+
+  @media (min-width: $viewpoint1) {
+    grid-column: 3 / span 1;
+    grid-row: 6 / span 1;
+  }
+
+  @media (min-width: $viewpoint2) {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+  }
+}
+
+#item-6 {
+  grid-column: 1 / span 2;
+  grid-row: 6 / span 2;
+
+  @media (min-width: $viewpoint1) {
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 2;
+  }
+
+  @media (min-width: $viewpoint2) {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+  }
+}
+
+#item-7 {
+  grid-column: 1 / span 2;
+  grid-row: 8 / span 1;
+
+  @media (min-width: $viewpoint1) {
+    grid-row: 10 / span 1;
+  }
+
+  @media (min-width: $viewpoint2) {
+    grid-column: 4 / span 2;
+    grid-row: 8 / span 1;
+  }
+}
+
+#item-8 {
+  grid-column: 1 / span 2;
+  grid-row: 9 / span 2;
+
+  @media (min-width: $viewpoint1) {
+    grid-row: 6/ span 2;
+  }
+
+  @media (min-width: $viewpoint2) {
+    grid-column: 4 / span 2;
+    grid-row: 3/ span 2
+  }
+}
+
+#item-9 {
+  grid-column: 1 / span 1;
+  grid-row: 11 / span 1;
+
+  @media (min-width: $viewpoint1) {
+    grid-column: 3 / span 1;
+    grid-row: 7 / span 1;
+  }
+
+  @media(min-width:$viewpoint2) {
+    grid-column: 5 / span 1;
+  }
+}
+
+#item-10 {
+  grid-column: 1 / span 1;
+  grid-row: 12 / span 1;
+
+  @media (min-width: $viewpoint1) {
+    grid-column: 3 / span 1;
+    grid-row: 10 / span 1;
+  }
+
+  @media(min-width:$viewpoint2) {
+    grid-column: 4 / span 1;
+    grid-row: 7 / span 1;
+  }
+}
+
+#item-11 {
+  grid-column: 2;
+  grid-row: 11 / span 2;
+
+  @media (min-width: $viewpoint1) {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 2;
+  }
+
+  @media (min-width: $viewpoint2) {
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 2;
+  }
+}
+
+#item-12 {
+  grid-column: 1 / span 2;
+  grid-row: 13 / span 2;
+
+  @media (min-width: $viewpoint1) {
+    grid-column: 2 / span 2;
+    grid-row: 8 / span 2;
+  }
+
+  @media(min-width:$viewpoint2) {
+    grid-column: 1 /span 2;
+    grid-row: 5/ span 2;
+  }
+}
+
+#item-13 {
+  grid-column: 1 / span 2;
+  grid-row: 15 / span 2;
+
+  @media (min-width: $viewpoint1) {
+    grid-column: 2 / span 2;
+    grid-row: 11 / span 2;
+  }
+
+  @media(min-width:$viewpoint2) {
+    grid-column: 3 /span 2;
+    grid-row: 5/ span 2;
+  }
+}
+
+#item-14 {
+  grid-column: 1 / span 1;
+  grid-row: 17 / span 2;
+
+  @media (min-width: $viewpoint1) {
+    grid-row: 8 / span 2;
+  }
+
+  @media(min-width:$viewpoint2) {
+    grid-row: 7 / span 2;
+  }
+}
+
+#item-15 {
+  grid-column: 2 / span 1;
+  grid-row: 17 / span 2;
+
+  @media (min-width: $viewpoint1) {
+    grid-column: 1;
+    grid-row: 11 / span 2;
+  }
+
+  @media(min-width:$viewpoint2) {
+    grid-column: 5 / span 1;
+    grid-row: 5 / span 2;
+  }
+}
+
+#item-16 {
+  grid-column: 1 / span 2;
+  grid-row: 19 / span 2;
+
+  @media (min-width: $viewpoint1) {
+    grid-row: 13 / span 2;
+  }
+
+  @media (min-width: $viewpoint2) {
+    grid-column: 2 / span 2;
+    grid-row: 7 / span 2;
+  }
+}
