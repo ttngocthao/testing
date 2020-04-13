@@ -4,8 +4,8 @@ import { FEATURES } from "../../data/feature.data"
 
 function FeatureList() {
   return (
-    <section className="midBrown-bkg">
-      <section className="feature-list padding-vertical--40">
+    <div className="midBrown-bkg">
+      <div className="feature-list padding-vertical--40">
         {FEATURES &&
           FEATURES.map((item, indx) => {
             return (
@@ -18,8 +18,8 @@ function FeatureList() {
               />
             )
           })}
-      </section>
-    </section>
+      </div>
+    </div>
   )
 }
 

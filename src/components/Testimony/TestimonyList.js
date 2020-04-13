@@ -4,8 +4,8 @@ import { PROFILES } from "../../data/profile.data"
 
 function TestimonyList() {
   return (
-    <section className="midBrown-bkg">
-      <section className="midBrown-bkg profile-list">
+    <div className="midBrown-bkg">
+      <div className="midBrown-bkg profile-list">
         {PROFILES &&
           PROFILES.map((item, indx) => (
             <TestimonyCard
@@ -17,8 +17,8 @@ function TestimonyList() {
               imgUrl={item.imgUrl}
             />
           ))}
-      </section>
-    </section>
+      </div>
+    </div>
   )
 }
 

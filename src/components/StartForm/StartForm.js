@@ -13,10 +13,10 @@ function StartForm() {
           be happy to help you.
         </div>
         <div className="button-list padding-top--20">
-          <label className="input-wrap" for="email">
+          <label className="input-wrap" htmlFor="email">
             <input type="text" id="email" placeholder="email@example.com" />
           </label>
-          <label className="input-wrap" for="submit">
+          <label className="input-wrap" htmlFor="submit">
             <input
               type="submit"
               className="btn-wrap"

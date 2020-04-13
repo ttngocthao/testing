@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 function CardWImg() {
   return (
-    <section className="midBrown-bkg">
-      <section className="midBrown-bkg padding-vertical--40 padding-horizontal--20 card-img-wrap">
+    <div className="midBrown-bkg">
+      <div className="midBrown-bkg padding-vertical--40 padding-horizontal--20 card-img-wrap">
         <figure className="padding-vertical--40 card-img--figure">
           <img
             alt="illustration of staying productive whenever you are"
@@ -39,8 +39,8 @@ function CardWImg() {
             </span>
           </p>
         </article>
-      </section>
-    </section>
+      </div>
+    </div>
   )
 }
 

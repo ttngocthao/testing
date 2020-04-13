@@ -68,7 +68,7 @@ function Footer() {
       <figure>
         <img alt="Fylo logo in white" src={LogoUrl} />
       </figure>
-      <section className="footer__bars-wrap">
+      <div className="footer__bars-wrap">
         <ul className="padding-vertical--40 footer__top-bar">
           {topBarItems &&
             topBarItems.map((item, indx) => {
@@ -82,15 +82,15 @@ function Footer() {
               )
             })}
         </ul>
-        <section className="footer__mid-bar--wrap">
+        <div className="footer__mid-bar--wrap">
           <ul className="footer__mid-bar footer__mid-bar--list1 padding-vertical--20">
             {showMidBarItems(midBarItems, 1)}
           </ul>
           <ul className="footer__mid-bar footer__mid-bar--list2 padding-vertical--20">
             {showMidBarItems(midBarItems, 2)}
           </ul>
-        </section>
-        <section className="padding-bottom--40">
+        </div>
+        <div className="padding-bottom--40">
           <ul className="footer__bottom-bar media-list">
             {socialMediaItems &&
               socialMediaItems.map((item, index) => {
@@ -107,8 +107,8 @@ function Footer() {
                 )
               })}
           </ul>
-        </section>
-      </section>
+        </div>
+      </div>
     </footer>
   )
 }
