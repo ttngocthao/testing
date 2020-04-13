@@ -9,6 +9,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   grid-auto-rows: minmax($gridHeight, auto);
+  font-family: 'Lato-Light';
 
   @media (min-width: $viewpoint1) {
     max-width: 800px;

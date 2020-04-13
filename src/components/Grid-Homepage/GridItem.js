@@ -11,10 +11,17 @@ function GridItem({ itemData }) {
     linkUrl,
     color,
     textAtBottom,
+    textUpperCase,
   } = itemData
   const textWrap = (
     <div className={textAtBottom ? "title-wrap--bottom" : "title-wrap"}>
-      <h2 className="text--white text--bold">{text}</h2>
+      <h2
+        className={`text--white text--bold padding-bottom--5 ${
+          textUpperCase ? "text--upperCase text--xsmall" : ""
+        }`}
+      >
+        {text}
+      </h2>
       {subText && <h3 className="text--white text--bold">{subText}</h3>}
     </div>
   )

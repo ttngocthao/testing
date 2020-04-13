@@ -18,6 +18,7 @@ export const gridHomeData = [
     "mainOrange",
     null,
     null,
+    false,
     false
   ),
   new GridItemData(
@@ -28,7 +29,8 @@ export const gridHomeData = [
     null,
     SsyImg,
     "/",
-    true
+    true,
+    false
   ),
   new GridItemData(
     "type-c",
@@ -38,7 +40,8 @@ export const gridHomeData = [
     null,
     BupaImg,
     "/",
-    true
+    true,
+    false
   ),
   new GridItemData(
     "type-d",
@@ -48,7 +51,8 @@ export const gridHomeData = [
     "green",
     null,
     "/expertise",
-    true
+    true,
+    false
   ),
   new GridItemData(
     "type-d",
@@ -58,7 +62,8 @@ export const gridHomeData = [
     "mainBlue",
     null,
     "/contact",
-    true
+    true,
+    false
   ),
   new GridItemData(
     "type-b",
@@ -68,7 +73,8 @@ export const gridHomeData = [
     null,
     ColorOfTheYearImg,
     "/",
-    true
+    true,
+    false
   ),
   new GridItemData(
     "type-a",
@@ -78,7 +84,8 @@ export const gridHomeData = [
     null,
     HsbcMentoringImg,
     "/",
-    true
+    true,
+    false
   ),
   new GridItemData(
     "type-b",
@@ -88,7 +95,8 @@ export const gridHomeData = [
     null,
     HsbcUniversityImg,
     "/",
-    true
+    true,
+    false
   ),
   new GridItemData(
     "type-d",
@@ -98,7 +106,8 @@ export const gridHomeData = [
     "burgendy",
     null,
     "/about",
-    true
+    true,
+    false
   ),
   new GridItemData(
     "type-d",
@@ -108,6 +117,7 @@ export const gridHomeData = [
     "mainBlue",
     null,
     null,
+    false,
     false
   ),
   new GridItemData(
@@ -118,7 +128,8 @@ export const gridHomeData = [
     "mainBlue",
     null,
     "/expertise",
-    false
+    false,
+    true
   ),
   new GridItemData(
     "type-b",
@@ -128,7 +139,8 @@ export const gridHomeData = [
     null,
     WavesImg,
     "/",
-    true
+    true,
+    false
   ),
   new GridItemData(
     "type-b",
@@ -138,7 +150,8 @@ export const gridHomeData = [
     null,
     AboutUsImg,
     "/about",
-    true
+    true,
+    false
   ),
   new GridItemData(
     "type-c",
@@ -148,7 +161,8 @@ export const gridHomeData = [
     "green",
     null,
     "/",
-    false
+    false,
+    true
   ),
   new GridItemData(
     "type-c",
@@ -158,7 +172,8 @@ export const gridHomeData = [
     null,
     DiageoImg,
     "/",
-    true
+    true,
+    false
   ),
   new GridItemData(
     "type-b",
@@ -168,6 +183,7 @@ export const gridHomeData = [
     null,
     AgnovosImg,
     "/",
-    true
+    true,
+    false
   ),
 ]

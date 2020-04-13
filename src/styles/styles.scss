@@ -4,12 +4,12 @@
 @import './../components/Footer/footer.scss';
 @import './../components/SocialMediaIcon/social-icon.scss';
 @import './../components/Grid-Homepage/grid-layout.scss';
+@import './../components/PageTiltle/page-title.scss';
 
 *,
 html {
-
   font-size: 16px;
-  font-family: "Lato-Light", sans-serif;
+  font-family: "Lato-Reg", sans-serif;
   line-height: 1.2 !important;
   box-sizing: border-box;
   font-weight: 300;
@@ -53,10 +53,7 @@ p {
 a {
   text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-    color: white;
-  }
+
 }
 
 .img--full-width {
@@ -94,6 +91,10 @@ a {
 
 .text--xsmall {
   font-size: 10px;
+}
+
+.text--upperCase {
+  text-transform: uppercase;
 }
 
 .text--bold {
