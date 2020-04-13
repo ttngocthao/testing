@@ -2,7 +2,7 @@ import React from "react"
 import Button from "../Buttons/Button"
 function StartForm() {
   return (
-    <section className="midBrown-bkg padding-top--40 padding-bottom--60 form-wrap">
+    <div className="midBrown-bkg padding-top--40 padding-bottom--60 form-wrap">
       <form className="midBrown2-bkg padding-top--20 padding-bottom--60 start-form">
         <h2 className="heading heading2 heading-bold text--center padding-vertical--20">
           Get early access today
@@ -24,10 +24,9 @@ function StartForm() {
               id="submit"
             />
           </label>
-          {/* <Button>Get Started For Free</Button> */}
         </div>
       </form>
-    </section>
+    </div>
   )
 }
 

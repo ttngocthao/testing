@@ -8,7 +8,7 @@ import Button from "../Buttons/Button"
 function Hero() {
   return (
     <Fragment>
-      <section className="lightBrown-bkg">
+      <div className="lightBrown-bkg">
         <figure className="lightBrown-bkg padding-horizontal--20 hero-img--figure">
           <img
             alt="all your files in one rescure loation and accessible anywhere"
@@ -16,9 +16,9 @@ function Hero() {
             className="full-width-img"
           />
         </figure>
-      </section>
+      </div>
 
-      <section className="lightBrown-bkg" style={{ position: "relative" }}>
+      <div className="lightBrown-bkg" style={{ position: "relative" }}>
         <figure className="curvy-img--figure">
           <img
             alt="curvy background in black"
@@ -28,13 +28,13 @@ function Hero() {
             className="full-width-img vertical-align__b"
           />
         </figure>
-        <section className="heroText">
+        <div className="heroText">
           <h1 className="heading heading-bold heading1">
             All your files in one secure location, accessible anywhere
           </h1>
-        </section>
-      </section>
-      <section className="midBrown-bkg">
+        </div>
+      </div>
+      <div className="midBrown-bkg">
         <div className="heroSubText">
           <p style={{ position: "relative", paddingBottom: 20 }}>
             Fylo stores all your most important files in one secure loation.
@@ -43,7 +43,7 @@ function Hero() {
           </p>
           <Button>Get Started</Button>
         </div>
-      </section>
+      </div>
     </Fragment>
   )
 }
