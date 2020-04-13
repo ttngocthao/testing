@@ -97,7 +97,7 @@ function Footer() {
                 return (
                   <li key={index} className="media-item">
                     <a href={item.url}>
-                      <span class="sr-only">{item.linkName}</span>
+                      <span className="sr-only">{item.linkName}</span>
                       <FontAwesomeIcon
                         icon={item.iconUrl}
                         className="media-icon"
