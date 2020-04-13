@@ -2,7 +2,7 @@ import React from "react"
 import QuoteImg from "../../images/bg-quotes.png"
 function TestimonyCard({ indx, name, role, text, imgUrl }) {
   return (
-    <article className="midBrown2-bkg profile-wrap">
+    <div className="midBrown2-bkg profile-wrap">
       {indx === 0 && (
         <figure className="quote-img">
           <img
@@ -22,7 +22,7 @@ function TestimonyCard({ indx, name, role, text, imgUrl }) {
           <li className="text--xsmall">{role}</li>
         </ul>
       </div>
-    </article>
+    </div>
   )
 }
 

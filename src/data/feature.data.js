@@ -7,13 +7,13 @@ export const FEATURES = [
   new Feature(
     "computer and devises icon means accessible anywhere",
     AccessIconUrl,
-    "Access your files, anywhere",
+    "Access your files icon",
     "The ability to user a smartphone, tablet, or computer to access your    account means your files follow you everywhere."
   ),
   new Feature(
     "security icon mean its secured",
     SecurityIconUrl,
-    "Security you can trust",
+    "Security icon",
     "2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files."
   ),
   new Feature(
