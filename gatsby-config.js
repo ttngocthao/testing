@@ -44,5 +44,11 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: { path: `./src/images` },
     },
+    {
+      resolve: "gatsby-plugin-html-attributes",
+      options: {
+        lang: "en",
+      },
+    },
   ],
 }
