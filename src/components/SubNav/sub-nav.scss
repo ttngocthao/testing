@@ -1,0 +1,11 @@
+.subNav-bar {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.subNav-item.subNav-item--active a {
+  border-bottom: 3px solid #f28b00;
+  padding-bottom: 2.5px;
+}

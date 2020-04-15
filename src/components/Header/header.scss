@@ -74,6 +74,11 @@
   padding-bottom: 5px;
 }
 
+.menu-item .active-page {
+  border-bottom: 3px solid $mainOrange;
+  padding-bottom: 2.5px;
+}
+
 .menu-item:hover a {
   border-bottom: 3px solid $mainOrange;
   padding-bottom: 2.5px;

@@ -5,6 +5,10 @@
 @import './../components/SocialMediaIcon/social-icon.scss';
 @import './../components/Grid-Homepage/grid-layout.scss';
 @import './../components/PageTiltle/page-title.scss';
+@import './../components/SubNav/sub-nav.scss';
+@import './../components/SpecCard/spec-card.scss';
+
+@import './pages/about.scss';
 
 *,
 html {
@@ -74,7 +78,7 @@ a {
 
 .heading2 {
   font-size: 30px;
-  font-weight: 700;
+  font-family: 'Lato-Black';
 }
 
 .heading3 {
@@ -84,6 +88,8 @@ a {
 .heading4 {
   font-size: 18px;
 }
+
+
 
 .text--small {
   font-size: 12px;
