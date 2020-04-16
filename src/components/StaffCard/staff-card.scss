@@ -1,0 +1,32 @@
+.staff-card__list {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.staff-card {
+  max-width: 250px;
+  padding: 10px 20px;
+}
+
+
+$ColorList: $burgendy,
+$green,
+$darkBlue,
+$mainOrange,
+$teal,
+$navy;
+
+// @each $color in $ColorList {
+@for $i from 1 through 6 {
+  .staff-card:nth-child(6n + #{$i}) .staff-name {
+    color: nth($ColorList, $i);
+  }
+
+  .staff-card:nth-child(6n+ #{$i}) .staff-role {
+    border-bottom: 2px solid nth($ColorList, $i);
+  }
+}
+
+// }

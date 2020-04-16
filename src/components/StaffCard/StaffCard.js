@@ -1,16 +1,22 @@
-import React from 'react'
+import React from "react"
+import ImgCard from "../ImgCard/ImgCard"
 
-function StaffCard({itemData}) {
-  const { name, imgUrl, role} = itemData;
+function StaffCard({ itemData }) {
+  const { name, imgUrl, role } = itemData
   return (
-    <li className="staff-card padding-bottom--20"> 
-    <figure className="staff-img-wrap">
-      <img className='img--full-width' src={imgUrl} alt="staff photo in grey scale -Mark Luckett __ chairman "/>
-    </figure>
-    
-    <p className="smallText2 padding-t--10 text-left staff-name">Mark Luckett</p>
-     <p className="smallText1 text-uppercase staff-role text-left adding-b--10">chairman</p>
-     </li>
+    <li className="staff-card">
+      <ImgCard
+        src={imgUrl}
+        alt={`${name} - ${role} `}
+        className="staff-img-wrap"
+      />
+      <h3 className="heading3 padding-top--10 padding-bottom--5 staff-name">
+        {name}
+      </h3>
+      <h5 className="heading5 text--upperCase staff-role padding-bottom--10">
+        {role}
+      </h5>
+    </li>
   )
 }
 

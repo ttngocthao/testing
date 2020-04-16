@@ -12,6 +12,7 @@ import ThaoImg from "../../images/about/staff/Thao.png"
 import LennaImg from "../../images/about/staff/Lenna.png"
 import RoxyImg from "../../images/about/staff/Roxy.png"
 import StaceyImg from "../../images/about/staff/Stacey.png"
+import StaffCard from "./StaffCard"
 
 var staffData = [
   { name: "Mark Luckett", imgUrl: MarkLImg, role: "chairman" },
@@ -34,8 +35,11 @@ var staffData = [
 ]
 function StaffList() {
   return (
-    <ul>
-      <li>List of staff here</li>
+    <ul className="staff-card__list">
+      {staffData &&
+        staffData.map((item, indx) => {
+          return <StaffCard itemData={item} key={indx} />
+        })}
     </ul>
   )
 }

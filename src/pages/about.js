@@ -7,6 +7,9 @@ import Section from "../components/Section/Section"
 
 import BSILogo from "../images/about/BSI logo.png"
 import SpecCardList from "../components/SpecCard/SpecCardList"
+import StaffList from "../components/StaffCard/StaffList"
+import ImgCard from "../components/ImgCard/ImgCard"
+import OurClients from "../components/OurClients/OurClients"
 
 const navItemList = [
   { linkUrl: "#fact", linkText: "fact" },
@@ -46,7 +49,7 @@ function about() {
           A diverse team of creative designers and developers headed up by a
           very experienced group of directors.
         </p>
-        <div>list of staff</div>
+        <StaffList />
       </Section>
       <Section
         title="We build relationships"
@@ -61,7 +64,7 @@ function about() {
         titleColor="mainOrange"
         titleCenter={true}
       >
-        <div>Logo of our clients</div>
+        <OurClients />
       </Section>
       <Section
         title="Quality Assurance"
@@ -69,13 +72,12 @@ function about() {
         titleColor="teal"
         titleCenter={true}
       >
-        <figure className="bsi-logo-wrap padding-bottom--10">
-          <img
-            src={BSILogo}
-            alt="BSI logo in teal colour"
-            className="img--full-width"
-          />
-        </figure>
+        <ImgCard
+          className="bsi-logo-wrap padding-bottom--10"
+          src={BSILogo}
+          alt="BSI logo in teal colour"
+        />
+
         <p className="text--center">
           Arthaus are one of few design agencies with a defined quality
           management system and have been independently assessed by BSI against

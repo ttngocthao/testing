@@ -7,6 +7,7 @@ import Section from "../components/Section/Section"
 import BrandingImgUrl from "../images/expertise/branding.png"
 import CommunicationsImgUrl from "../images/expertise/communications.png"
 import DigitalImgUrl from "../images/expertise/digital.png"
+import ImgCard from "../components/ImgCard/ImgCard"
 
 const navItemList = [
   { linkUrl: "#branding", linkText: "branding" },
@@ -28,13 +29,12 @@ function expertise() {
         titleColor="burgendy"
         subTitle2="Develop, nurture, protect &#38; build"
       >
-        <figure className="padding-bottom--5">
-          <img
-            className="img--full-width"
-            alt="Branding projects"
-            src={BrandingImgUrl}
-          />
-        </figure>
+        <ImgCard
+          className="padding-bottom--5"
+          alt="Branding projects"
+          src={BrandingImgUrl}
+        />
+
         <p>
           We all love brands, they make a statement about us, they make us feel
           good, they make choosing easier - they are fast! We call them ‘Brain
@@ -51,13 +51,12 @@ function expertise() {
         titleColor="darkBlue"
         subTitle2="Enable, engage &#38; inspire"
       >
-        <figure className="padding-bottom--5">
-          <img
-            src={CommunicationsImgUrl}
-            alt="Communications projects"
-            className="img--full-width"
-          />
-        </figure>
+        <ImgCard
+          className="padding-bottom--5"
+          src={CommunicationsImgUrl}
+          alt="Communications projects"
+        />
+
         <p>
           We’re experts in internal communications and employee engagement. From
           initial positioning and planning, through concepts, inspirational
@@ -76,13 +75,12 @@ function expertise() {
         titleColor="green"
         subTitle2="Concept, solutioning, design, development, delivery &#38; support"
       >
-        <figure className="padding-bottom--5">
-          <img
-            src={DigitalImgUrl}
-            alt="Digital projects"
-            className="img--full-width"
-          />
-        </figure>
+        <ImgCard
+          className="padding-bottom--5"
+          src={DigitalImgUrl}
+          alt="Digital projects"
+        />
+
         <p>
           We design and deliver a wide range of digital projects including,
           corporate websites and intranets, bespoke tools and systems,
