@@ -10,6 +10,7 @@ import SpecCardList from "../components/SpecCard/SpecCardList"
 import StaffList from "../components/StaffCard/StaffList"
 import ImgCard from "../components/ImgCard/ImgCard"
 import OurClients from "../components/OurClients/OurClients"
+import TestimonyList from "../components/TestimonyCard/TestimonyList"
 
 const navItemList = [
   { linkUrl: "#fact", linkText: "fact" },
@@ -56,7 +57,7 @@ function about() {
         titleColor="darkBlue"
         titleCenter={true}
       >
-        <div>Testimony list here</div>
+        <TestimonyList />
       </Section>
       <Section
         title="Our clients"

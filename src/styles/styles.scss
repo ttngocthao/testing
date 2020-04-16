@@ -9,6 +9,7 @@
 @import './../components/SpecCard/spec-card.scss';
 @import './../components/StaffCard/staff-card.scss';
 @import './../components/OurClients/our-clients.scss';
+@import './../components/TestimonyCard/testimony-card.scss';
 
 @import './pages/about.scss';
 
@@ -117,7 +118,7 @@ a {
 }
 
 
-$textColors: ('burgendy':$burgendy, 'green':$green, 'darkBlue':$darkBlue, 'mainOrange':$mainOrange, 'teal':$teal, 'navy':$navy, 'white':white, 'darkGray':$darkGray, 'whiteGray':$whiteGray, 'mainBlue':$mainBlue);
+$textColors: ('burgendy':$burgendy, 'green':$green, 'darkBlue':$darkBlue, 'mainOrange':$mainOrange, 'teal':$teal, 'navy':$navy, 'white':white, 'darkGray':$darkGray, 'whiteGray':$whiteGray, 'mainBlue':$mainBlue, 'lightGray':$lightGray);
 
 @each $name,
 $color in $textColors {

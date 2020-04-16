@@ -1,0 +1,28 @@
+.testimony-list {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.testimony-card {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.testimony-text {
+  min-height: 176px;
+
+}
+
+.testimony-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #c0c0c0;
+  margin: 20px auto;
+}
+
+.testimony-info {
+  font-family: 'Lato-Black';
+}
