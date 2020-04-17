@@ -1,5 +1,17 @@
 @import '../../styles/components/variables.scss';
 
+.subNavWrap {
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+
+  &.subNavSticky {
+    position: fixed;
+    top: 62px;
+    left: 0;
+  }
+}
+
 .subNavBar {
   max-width: 400px;
   width: 100%;
@@ -9,13 +21,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 10px;
-  background-color: white;
 
-  &.subNavSticky {
-    position: fixed;
-    top: 62px;
-    left: 0;
-  }
+
+
+
 }
 
 .subNavItem {

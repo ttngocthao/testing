@@ -29,18 +29,21 @@ function StickyNavBar({ navItemList, navSticky }) {
     //   setNavSticky(isVisible)
     // }}
     //>
-    <ul
-      className={`${styles.subNavBar} ${navSticky ? styles.subNavSticky : ""} `}
+    <div
+      className={`${styles.subNavWrap} ${navSticky ? styles.subNavSticky : ""}`}
     >
-      {navItemList &&
-        navItemList.map((item, index) => {
-          return (
-            <li key={index} className={`${styles.subNavItem} `}>
-              <a href={item.linkUrl}>{item.linkText}</a>
-            </li>
-          )
-        })}
-    </ul>
+      <ul className={`${styles.subNavBar}  `}>
+        {navItemList &&
+          navItemList.map((item, index) => {
+            return (
+              <li key={index} className={`${styles.subNavItem} `}>
+                <a href={item.linkUrl}>{item.linkText}</a>
+              </li>
+            )
+          })}
+      </ul>
+    </div>
+
     //</VisibilitySensor>
   )
 }
