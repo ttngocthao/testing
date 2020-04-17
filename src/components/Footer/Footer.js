@@ -1,5 +1,5 @@
 import React from "react"
-
+import styles from "./footer.module.scss"
 import {
   faFacebookF,
   faTwitter,
@@ -29,9 +29,10 @@ const socialMediaList = [
 ]
 
 function Footer() {
+  const { footerContainer, socialIconList } = styles
   return (
-    <footer className="bkg--darkGray border-top--3 border-color--mainOrange">
-      <ul className="display-flex social-icon--list">
+    <footer className={footerContainer}>
+      <ul className={socialIconList}>
         {/* put items in order before mapping */}
         {socialMediaList &&
           socialMediaList

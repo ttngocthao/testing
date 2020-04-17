@@ -1,20 +1,24 @@
-.testimony-list {
+@import '../../styles/components/variables.scss';
+
+.testimonyList {
   padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.testimony-card {
+.testimonyCard {
   max-width: 300px;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
-.testimony-text {
+.testimonyText {
   min-height: 176px;
-
+  padding: 20px;
+  background-color: $whiteGray;
 }
 
-.testimony-logo {
+.testimonyLogo {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -23,6 +27,6 @@
   margin: 20px auto;
 }
 
-.testimony-info {
+.testimonyInfo {
   font-family: 'Lato-Black';
 }

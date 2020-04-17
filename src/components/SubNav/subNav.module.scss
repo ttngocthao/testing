@@ -1,0 +1,29 @@
+@import '../../styles/components/variables.scss';
+
+.subNavBar {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+  background-color: white;
+
+  &.subNavSticky {
+    position: fixed;
+    top: 62px;
+    left: 0;
+  }
+}
+
+.subNavItem {
+  text-transform: uppercase;
+}
+
+//this one not test if it works
+.subNavItem.subNavItemActive a {
+  border-bottom: 3px solid $mainOrange;
+  padding-bottom: 2.5px;
+}

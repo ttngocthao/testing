@@ -1,0 +1,16 @@
+@import '../../styles/components/variables.scss';
+
+.titleContainer {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 30px 0;
+  font-family: 'Lato-Black';
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.titleText {
+  border-bottom: 2px solid $mainOrange;
+  padding-bottom: 5px;
+
+}

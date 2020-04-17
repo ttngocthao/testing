@@ -1,8 +1,12 @@
 import React, { useState } from "react"
-import Logo from "../../images/header/Logo.png"
 import { Link } from "gatsby"
-import MenuItem from "./MenuItem"
 
+import Logo from "../../images/header/Logo.png"
+
+import MenuItem from "./MenuItem"
+import ImgCard from "../ImgCard/ImgCard"
+
+import styles from "./header.module.scss"
 function Header() {
   const [menuOpened, setMenuOpened] = useState(false)
 
@@ -11,16 +15,19 @@ function Header() {
   }
 
   return (
-    <header className="padding-top--20 padding-horizontal--10">
+    <header className={styles.headerContent}>
       <nav>
-        <section className="display-flex align-end justify-content__space-between padding-bottom--10">
-          <figure className="logo-wrap">
-            <Link to="/">
-              <img src={Logo} alt="Arthaus logo" className="img--full-width" />
-            </Link>
-          </figure>
+        <section className={styles.navContent}>
+          <Link to="/">
+            <ImgCard
+              src={Logo}
+              alt="Arthaus logo"
+              className={styles.logoWrap}
+            />
+          </Link>
+
           <ul
-            className={`menu-btn ${menuOpened && "menu-open"}`}
+            className={`${styles.menuBtn} ${menuOpened && styles.menuOpened}`}
             onClick={menuClickHandle}
           >
             <li></li>
@@ -29,7 +36,11 @@ function Header() {
           </ul>
         </section>
 
-        <ul className={`menu-list ${menuOpened ? "menu-list--show" : ""}`}>
+        <ul
+          className={`${styles.menuList} ${
+            menuOpened ? styles.menuListShow : ""
+          }`}
+        >
           <MenuItem url="/about" text="ABOUT" />
           <MenuItem url="/expertise" text="EXPERTISE" />
           <MenuItem url="/work" text="WORK" />

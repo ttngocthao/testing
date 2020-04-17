@@ -1,15 +1,20 @@
-footer {
+@import '../../styles/components/variables.scss';
+
+.footerContainer {
   position: relative;
   padding-top: 40px;
   padding-bottom: 40px;
+  background-color: $darkGray;
+  border-top: 3px solid $mainOrange;
 
 }
 
-.social-icon--list {
+.socialIconList {
   max-width: 120px;
   width: 100%;
   margin: 0 auto;
   padding-bottom: 10px;
   justify-content: space-between;
   align-items: center;
+  display: flex;
 }

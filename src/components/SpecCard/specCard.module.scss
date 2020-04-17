@@ -1,0 +1,36 @@
+@import '../../styles/components/variables.scss';
+
+.specCardList {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.specCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  font-family: 'Lato-Black';
+  max-width: 138px;
+  padding: 20px;
+  text-align: center;
+  margin: 5px;
+  $borderColors: (#e8dddf, #e5ebcf, #d7dee5, #fce7ca, #deeeeb, #d4d3db);
+
+  @for $i from 1 to 7 {
+    &:nth-child(#{$i}) {
+      border: 1px solid nth($borderColors, $i)
+    }
+  }
+}
+
+.specIcon {
+  max-width: 57px;
+
+}
+
+.spectText {
+  text-align: center;
+}

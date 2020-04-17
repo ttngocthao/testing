@@ -1,11 +1,12 @@
-.client-logo__list {
+.clientLogoList {
   display: flex;
   flex-wrap: wrap;
   max-width: 800px;
-  justify-content: center;
+  justify-content: space-around;
   margin: 0 auto;
 }
 
-.client-logo {
+.clientLogo {
   max-width: 140px;
+  padding: 10px;
 }

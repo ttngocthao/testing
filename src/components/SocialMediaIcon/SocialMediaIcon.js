@@ -1,11 +1,17 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
+import styles from "./socialIcon.module.scss"
+
 function socialMediaIcon({ icon, linkUrl }) {
   return (
-    <a href={linkUrl} className="text--white social-icon--link">
+    <a href={linkUrl} className={styles.socialIconLink}>
       <span className="sr-only">social media icon</span>
-      <FontAwesomeIcon icon={icon} color="white" className="social-icon" />
+      <FontAwesomeIcon
+        icon={icon}
+        color="white"
+        className={styles.socialIcon}
+      />
     </a>
   )
 }

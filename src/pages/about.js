@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useRef, useEffect } from "react"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
 import PageTitle from "../components/PageTiltle/PageTitle"
@@ -18,15 +18,34 @@ const navItemList = [
   { linkUrl: "#clients", linkText: "clients" },
 ]
 
-function about() {
+function About() {
+  const [navSticky, setNavSticky] = useState(false)
+  const ref = useRef(null)
+  const handleScroll = () => {
+    if (ref.current) {
+      if (ref.current.getBoundingClientRect().top <= 0) {
+        setNavSticky(true)
+      } else {
+        setNavSticky(false)
+      }
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", () => handleScroll)
+    }
+  }, [])
+
   return (
     <Layout>
       <SEO
         title="Arthaus Visual Communications - About us"
         description="Give information about company CEO and employees. Provide more details of our clients"
       />
-      <PageTitle pageTitle="about us" />
-      <SubNavBar navItemList={navItemList} />
+      <PageTitle pageTitle="about us" reference={ref} />
+      <SubNavBar navItemList={navItemList} navSticky={navSticky} />
 
       <Section
         title="Brand development &#38; communications"
@@ -91,4 +110,4 @@ function about() {
   )
 }
 
-export default about
+export default About

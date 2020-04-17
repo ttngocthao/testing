@@ -1,11 +1,9 @@
 import React from "react"
-
-function PageTitle({ pageTitle }) {
+import styles from "./pageTitle.module.scss"
+function PageTitle({ pageTitle, reference }) {
   return (
-    <h1 className="heading1 text--center text--upperCase page-title padding-vertical--30">
-      <span className="border-bottom--2 border-color--mainOrange padding-bottom--5">
-        {pageTitle}
-      </span>
+    <h1 className={styles.titleContainer} ref={reference}>
+      <span className={styles.titleText}>{pageTitle}</span>
     </h1>
   )
 }

@@ -1,8 +1,12 @@
 import React from "react"
 import TestimonyCard from "./TestimonyCard"
+
+import styles from "./testimony.module.scss"
+
 import DiageoLogo from "../../images/about/testimony/Logos_Diageo.png"
 import OtsukaLogo from "../../images/about/testimony/Logos_Otsuka.png"
 import HsbcLogo from "../../images/about/testimony/Logos_HSBC.png"
+
 const testimonyData = [
   {
     text:
@@ -32,9 +36,10 @@ const testimonyData = [
     company: "hsbc",
   },
 ]
+
 function TestimonyList() {
   return (
-    <ul className="testimony-list">
+    <ul className={styles.testimonyList}>
       {testimonyData &&
         testimonyData.map((item, indx) => {
           return <TestimonyCard itemData={item} key={indx} />

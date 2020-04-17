@@ -15,7 +15,11 @@ import OtsukaImg from "../../images/about/clients/otsuka_logo.png"
 import MsImg from "../../images/about/clients/M&S_logo.png"
 import DixonImg from "../../images/about/clients/dixons_logo.png"
 import BupaImg from "../../images/about/clients/bupa_logo.png"
+
 import ImgCard from "../ImgCard/ImgCard"
+
+import styles from "./ourClient.module.scss"
+
 const ClientsData = [
   { src: DiageoImg, alt: "Diageo Ltd" },
   { src: WaveImg, alt: "Wave Ltd" },
@@ -36,7 +40,7 @@ const ClientsData = [
 
 function OurClients() {
   return (
-    <div className="client-logo__list">
+    <div className={styles.clientLogoList}>
       {ClientsData &&
         ClientsData.map(({ src, alt }, indx) => {
           return (
@@ -44,7 +48,7 @@ function OurClients() {
               key={indx}
               src={src}
               alt={alt}
-              className="client-logo padding-vertical--10 padding-horizontal--10"
+              className={styles.clientLogo}
             />
           )
         })}

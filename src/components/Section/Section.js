@@ -1,5 +1,7 @@
 import React from "react"
 
+import styles from "./section.module.scss"
+
 function Section({
   title,
   titleColor,
@@ -9,18 +11,14 @@ function Section({
   titleCenter,
 }) {
   return (
-    <section className="padding-vertical--30 padding-horizontal--10">
+    <section className={styles.sectionWrap}>
       <h2
         className={`text--bold heading2 text--${titleColor} ${titleCenter &&
           "text--center"} padding-bottom--10`}
       >
         {title}
       </h2>
-      {subTitle && (
-        <h4 className="heading4 text--upperCase padding-bottom--20 text--center">
-          {subTitle}
-        </h4>
-      )}
+      {subTitle && <h4 className={styles.sectionSubTitle}>{subTitle}</h4>}
       {subTitle2 && (
         <h4 className={`heading4 padding-bottom--10 text--${titleColor}`}>
           {subTitle2}
