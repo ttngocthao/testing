@@ -1,16 +1,17 @@
-import React, { useState, useRef, useEffect } from "react"
-import Layout from "../components/Layout/Layout"
-import SEO from "../components/SEO/SEO"
-import PageTitle from "../components/PageTiltle/PageTitle"
-import SubNavBar from "../components/SubNav/SubNavBar"
-import Section from "../components/Section/Section"
+import React from "react"
 
 import BSILogo from "../images/about/BSI logo.png"
+
+import Layout from "../components/Layout/Layout"
+import SEO from "../components/SEO/SEO"
+import Section from "../components/Section/Section"
 import SpecCardList from "../components/SpecCard/SpecCardList"
 import StaffList from "../components/StaffCard/StaffList"
 import ImgCard from "../components/ImgCard/ImgCard"
 import OurClients from "../components/OurClients/OurClients"
 import TestimonyList from "../components/TestimonyCard/TestimonyList"
+import CountUpList from "../components/CountUp/CountUpList"
+import PageTitleSubNavWrap from "../components/PageTitleSubNaWrap/PageTitleSubNavWrap"
 
 const navItemList = [
   { linkUrl: "#fact", linkText: "fact" },
@@ -19,33 +20,14 @@ const navItemList = [
 ]
 
 function About() {
-  const [navSticky, setNavSticky] = useState(false)
-  const ref = useRef(null)
-  const handleScroll = () => {
-    if (ref.current) {
-      if (ref.current.getBoundingClientRect().top <= 0) {
-        setNavSticky(true)
-      } else {
-        setNavSticky(false)
-      }
-    }
-  }
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-
-    return () => {
-      window.removeEventListener("scroll", () => handleScroll)
-    }
-  }, [])
-
   return (
     <Layout>
       <SEO
         title="Arthaus Visual Communications - About us"
         description="Give information about company CEO and employees. Provide more details of our clients"
       />
-      <PageTitle pageTitle="about us" reference={ref} />
-      <SubNavBar navItemList={navItemList} navSticky={navSticky} />
+
+      <PageTitleSubNavWrap pageTitle="about us" navItemList={navItemList} />
 
       <Section
         title="Brand development &#38; communications"
@@ -62,7 +44,7 @@ function About() {
           mediums.
         </p>
         <SpecCardList />
-        <div>4 numbers</div>
+        <CountUpList />
       </Section>
       <Section title="Our people" titleColor="green" titleCenter={true}>
         <p className="text--center">
