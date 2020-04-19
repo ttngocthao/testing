@@ -113,6 +113,7 @@ function ContactForm() {
         value={formik.values.firstName}
         errorMsg={formik.errors.message}
       />
+      <div data-netlify-recaptcha="true"></div>
       <Button formSubmit orangeBtn>
         Submit
       </Button>
