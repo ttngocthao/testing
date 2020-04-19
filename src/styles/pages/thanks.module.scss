@@ -1,0 +1,14 @@
+@import '../components/variables.scss';
+
+.container {
+  padding: 0 10px 60px;
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+  color: $mainOrange;
+  padding-bottom: 20px;
+
+  font-family: 'Lato-Black';
+}

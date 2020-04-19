@@ -1,0 +1,13 @@
+@import '../../styles/components/variables.scss';
+
+.btnWrap {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  box-shadow: none;
+
+  &.orangeBtn {
+    background-color: $mainOrange;
+    color: white;
+  }
+}

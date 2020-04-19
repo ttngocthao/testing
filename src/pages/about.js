@@ -12,6 +12,7 @@ import OurClients from "../components/OurClients/OurClients"
 import TestimonyList from "../components/TestimonyCard/TestimonyList"
 import CountUpList from "../components/CountUp/CountUpList"
 import PageTitleSubNavWrap from "../components/PageTitleSubNaWrap/PageTitleSubNavWrap"
+import ContactForm from "../components/ContactForm/ContactForm"
 
 const navItemList = [
   { linkUrl: "#fact", linkText: "fact" },
@@ -87,7 +88,7 @@ function About() {
           quality and assurance.
         </p>
       </Section>
-      <div>Contact Form here</div>
+      <ContactForm />
     </Layout>
   )
 }
