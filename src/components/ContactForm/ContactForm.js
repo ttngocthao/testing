@@ -1,7 +1,6 @@
-import React, { useState, useRef } from "react"
+import React from "react"
 import { navigate } from "gatsby-link"
 import { useFormik } from "formik"
-import Recaptcha from "react-google-recaptcha"
 import Input from "./Input"
 import Button from "../Buttons/Button"
 import styles from "./contactForm.module.scss"
@@ -31,9 +30,6 @@ const validate = values => {
   return errors
 }
 
-//const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
-const RECAPTCHA_KEY = "6LfSVOsUAAAAAOpPADYNs737d02vKb0z0KQaku3I"
-//const recaptchaRef = useRef("")
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -41,7 +37,6 @@ const encode = data => {
 }
 
 function ContactForm() {
-  const [captchaValue, setCaptchaValue] = useState(null)
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -54,30 +49,20 @@ function ContactForm() {
       return values
     },
   })
-  // const refRecaptcha = useRef("recaptcha")
-  const handleRecaptcha = value => {
-    setCaptchaValue(value)
-    console.log("Captcha value:", value)
-  }
   const handleSubmit = e => {
     e.preventDefault()
     const values = formik.onSubmit
     const form = e.target
-    if (formik.errors.length !== 0) {
-      return formik.errors
-    }
-    if (captchaValue.length !== 0) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": form.getAttribute("name"),
-          values,
-        }),
-      })
-        .then(() => navigate(form.getAttribute("action")))
-        .catch(error => alert(error))
-    }
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        values,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
   }
   return (
     <form
@@ -128,7 +113,6 @@ function ContactForm() {
         value={formik.values.firstName}
         errorMsg={formik.errors.message}
       />
-      <Recaptcha sitekey={RECAPTCHA_KEY} onChange={handleRecaptcha} />
       <Button formSubmit orangeBtn>
         Submit
       </Button>

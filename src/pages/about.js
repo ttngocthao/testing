@@ -88,7 +88,7 @@ function About() {
           quality and assurance.
         </p>
       </Section>
-      <ContactForm />
+      {/* <ContactForm /> */}
     </Layout>
   )
 }
