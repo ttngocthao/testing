@@ -31,7 +31,8 @@ const validate = values => {
   return errors
 }
 
-const RECAPTCHA_KEY = "6LfSVOsUAAAAAOpPADYNs737d02vKb0z0KQaku3I"
+//const RECAPTCHA_KEY = "6LfSVOsUAAAAAOpPADYNs737d02vKb0z0KQaku3I"
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
 //const recaptchaRef = useRef("")
 const encode = data => {
   return Object.keys(data)
@@ -55,7 +56,7 @@ function ContactForm() {
   })
   // const refRecaptcha = useRef("recaptcha")
   const handleRecaptcha = value => {
-    //  setCaptchaValue(value)
+    setCaptchaValue(value)
     console.log("Captcha value:", value)
   }
   const handleSubmit = e => {
@@ -65,12 +66,14 @@ function ContactForm() {
     if (formik.errors.length !== 0) {
       return formik.errors
     }
+    if (!captchaValue) {
+      return
+    }
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        "g-recaptcha-response": captchaValue,
         values,
       }),
     })
