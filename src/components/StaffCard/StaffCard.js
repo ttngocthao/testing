@@ -10,6 +10,8 @@ function StaffCard({ itemData }) {
         src={imgUrl}
         alt={`${name} - ${role} `}
         className="staff-img-wrap"
+        width="220"
+        height="220"
       />
       <h3 className={`heading3 ${localStyles.staffName}`}>{name}</h3>
       <h5 className={localStyles.staffRole}>{role}</h5>
