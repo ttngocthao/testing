@@ -66,19 +66,18 @@ function ContactForm() {
     if (formik.errors.length !== 0) {
       return formik.errors
     }
-    if (!captchaValue) {
-      return
+    if (captchaValue.length !== 0) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": form.getAttribute("name"),
+          values,
+        }),
+      })
+        .then(() => navigate(form.getAttribute("action")))
+        .catch(error => alert(error))
     }
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        values,
-      }),
-    })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error))
   }
   return (
     <form
