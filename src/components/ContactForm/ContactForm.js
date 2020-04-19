@@ -31,8 +31,8 @@ const validate = values => {
   return errors
 }
 
-//const RECAPTCHA_KEY = "6LfSVOsUAAAAAOpPADYNs737d02vKb0z0KQaku3I"
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
+//const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
+const RECAPTCHA_KEY = "6LfSVOsUAAAAAOpPADYNs737d02vKb0z0KQaku3I"
 //const recaptchaRef = useRef("")
 const encode = data => {
   return Object.keys(data)
@@ -74,6 +74,7 @@ function ContactForm() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
+        "g-recaptcha-response": captchaValue,
         values,
       }),
     })
