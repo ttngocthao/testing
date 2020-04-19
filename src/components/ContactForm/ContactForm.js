@@ -53,6 +53,9 @@ function ContactForm() {
     e.preventDefault()
     const values = formik.onSubmit
     const form = e.target
+    if (formik.errors.length !== 0) {
+      return formik.errors
+    }
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },

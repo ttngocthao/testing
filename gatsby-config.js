@@ -68,5 +68,8 @@ module.exports = {
         showSpinner: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-recaptcha`,
+    },
   ],
 }
