@@ -74,7 +74,6 @@ function ContactForm() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        "g-recaptcha-response": captchaValue,
         values,
       }),
     })
