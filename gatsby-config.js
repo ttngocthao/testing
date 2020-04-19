@@ -59,5 +59,8 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-minify`,
+    },
   ],
 }
