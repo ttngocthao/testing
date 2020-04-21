@@ -33,7 +33,7 @@ function TestForm() {
         return errors
       }}
       onSubmit={(data, { resetForm }) => {
-        fetch("/testForm", {
+        fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
