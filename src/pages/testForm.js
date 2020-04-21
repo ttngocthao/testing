@@ -37,6 +37,7 @@ function TestForm() {
           }),
         })
           .then(() => {
+            alert("send")
             resetForm(true)
             //navigate(form.getAttribute("action"))
           })
@@ -52,6 +53,8 @@ function TestForm() {
           data-netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
         >
+          <input type="hidden" name="form-name" value="contactTest" />{" "}
+          {/*this is for netlify to work*/}
           <label htmlFor="fullName">Full name:</label>
           <Field name="fullName" type="text" />
           <ErrorMessage name="fullName" />
