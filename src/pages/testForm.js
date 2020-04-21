@@ -8,9 +8,15 @@ const encode = data => {
 }
 
 function TestForm() {
+  console.log(document.getElementsByName("contactTest"))
   return (
     <Formik
-      initialValues={{ fullName: "", email: "" }}
+      initialValues={{
+        "bot-field": "",
+        "form-name": "contactTest",
+        fullName: "",
+        email: "",
+      }}
       validate={values => {
         const errors = {}
         if (!values.fullName) {
@@ -28,7 +34,7 @@ function TestForm() {
         return errors
       }}
       onSubmit={(data, { resetForm }) => {
-        fetch("/", {
+        fetch("/testForm", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
@@ -47,14 +53,14 @@ function TestForm() {
       {({ values, errors }) => (
         <Form
           name="contactTest"
-          method="post"
+          method="POST"
           action="/thanks/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
         >
-          <input type="hidden" name="form-name" value="contactTest" />{" "}
-          {/*this is for netlify to work*/}
+          <Field type="hidden" name="form-name" />
+          <Field type="hidden" name="bot-field" />
           <label htmlFor="fullName">Full name:</label>
           <Field name="fullName" type="text" />
           <ErrorMessage name="fullName" />
