@@ -8,7 +8,6 @@ const encode = data => {
 }
 
 function TestForm() {
-  console.log(document.getElementsByName("contactTest"))
   return (
     <Formik
       initialValues={{
