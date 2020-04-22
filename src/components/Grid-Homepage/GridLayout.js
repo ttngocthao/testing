@@ -3,7 +3,7 @@ import { gridHomeData } from "../../data/dummy.data"
 import GridItem from "./GridItem"
 
 function GridLayout() {
-  console.log(gridHomeData)
+  //console.log(gridHomeData)
   return (
     <div className="grid-layout">
       {gridHomeData &&

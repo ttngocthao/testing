@@ -6,7 +6,7 @@ function Input({ className, name, label, textArea, required, errorMessage }) {
   const [inputValue, setInputValue] = useState("")
   const onChangeHandle = e => {
     setInputValue(e.currentTarget.value)
-    console.log(inputValue)
+    // console.log(inputValue)
   }
 
   return (
