@@ -52,6 +52,7 @@ function TestForm() {
       {({ values, errors }) => (
         <Form
           data-netlify="true"
+          name="contactTest"
           // data-netlify-honeypot="bot-field"
           // data-netlify-recaptcha="true"
         >
