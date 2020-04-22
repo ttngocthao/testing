@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Formik, Field, Form, ErrorMessage } from "formik"
+import Recaptcha from "react-recaptcha"
 
 const encode = data => {
   return Object.keys(data)
@@ -8,6 +9,14 @@ const encode = data => {
 }
 
 function TestForm() {
+  const [token, setToken] = useState(null)
+  useEffect(() => {
+    const script = document.createElement("script")
+    script.src = "https://www.google.com/recaptcha/api.js"
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
+  }, [])
   return (
     <Formik
       initialValues={{
@@ -33,20 +42,25 @@ function TestForm() {
         return errors
       }}
       onSubmit={(data, { resetForm }) => {
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({
-            "form-name": "contactTest",
-            ...data,
-          }),
-        })
-          .then(() => {
-            alert("send")
-            resetForm(true)
-            //navigate(form.getAttribute("action"))
+        if (token !== null) {
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({
+              "form-name": "contactTest",
+              ...data,
+              "g-recaptcha-response": token,
+            }),
           })
-          .catch(error => alert(error))
+            .then(() => {
+              alert("send")
+              resetForm(true)
+              //navigate(form.getAttribute("action"))
+            })
+            .catch(error => alert(error))
+        } else {
+          alert("recaptcha needed")
+        }
       }}
     >
       {({ values, errors }) => (
@@ -54,7 +68,7 @@ function TestForm() {
           data-netlify="true"
           name="contactTest"
           data-netlify-honeypot="bot-field"
-          // data-netlify-recaptcha="true"
+          data-netlify-recaptcha="true"
         >
           <Field type="hidden" name="form-name" />
           <Field type="hidden" name="bot-field" />
@@ -65,10 +79,22 @@ function TestForm() {
           <label htmlFor="email">Email</label>
           <Field name="email" type="text" />
           <ErrorMessage name="email" />
+          <Recaptcha
+            sitekey="6LfSVOsUAAAAAOpPADYNs737d02vKb0z0KQaku3I"
+            render="explicit"
+            theme="dark"
+            verifyCallback={response => {
+              setToken(response)
+            }}
+            onloadCallback={() => {
+              console.log("done loading!")
+            }}
+          />
           <br />
           <button type="submit">Submit</button>
           <pre>{JSON.stringify(values, null, 2)}</pre>
           <pre>{JSON.stringify(errors, null, 2)}</pre>
+          <pre>{JSON.stringify(token)}</pre>
         </Form>
       )}
     </Formik>
