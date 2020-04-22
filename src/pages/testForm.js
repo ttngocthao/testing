@@ -37,8 +37,8 @@ function TestForm() {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
-            "form-name": document.getElementsByName("contactTest")[0],
-            data,
+            "form-name": "contactTest",
+            ...data,
           }),
         })
           .then(() => {
@@ -51,12 +51,9 @@ function TestForm() {
     >
       {({ values, errors }) => (
         <Form
-          name="contactTest"
-          method="POST"
-          action="/thanks/"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          data-netlify-recaptcha="true"
+          // data-netlify-honeypot="bot-field"
+          // data-netlify-recaptcha="true"
         >
           <Field type="hidden" name="form-name" />
           <Field type="hidden" name="bot-field" />
