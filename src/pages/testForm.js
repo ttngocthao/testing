@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Formik, Field, Form, ErrorMessage } from "formik"
+
 import Recaptcha from "react-recaptcha"
 
 const encode = data => {
@@ -9,6 +10,7 @@ const encode = data => {
 }
 
 function TestForm() {
+  //console.log(process.env.SITE_RECAPTCHA_KEY)
   const [token, setToken] = useState(null)
   useEffect(() => {
     const script = document.createElement("script")
@@ -80,7 +82,7 @@ function TestForm() {
           <Field name="email" type="text" />
           <ErrorMessage name="email" />
           <Recaptcha
-            sitekey="6LfSVOsUAAAAAOpPADYNs737d02vKb0z0KQaku3I"
+            sitekey={process.env.SITE_RECAPTCHA_KEY}
             render="explicit"
             theme="dark"
             verifyCallback={response => {
