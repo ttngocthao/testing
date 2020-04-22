@@ -54,7 +54,7 @@ function TestForm() {
           data-netlify="true"
           name="contactTest"
           data-netlify-honeypot="bot-field"
-          data-netlify-recaptcha="true"
+          // data-netlify-recaptcha="true"
         >
           <Field type="hidden" name="form-name" />
           <Field type="hidden" name="bot-field" />
