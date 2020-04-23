@@ -82,7 +82,7 @@ function TestForm() {
           <Field name="email" type="text" />
           <ErrorMessage name="email" />
           <Recaptcha
-            sitekey="6LfSVOsUAAAAAOpPADYNs737d02vKb0z0KQaku3I"
+            sitekey={process.env.SITE_RECAPTCHA_KEY}
             render="explicit"
             theme="dark"
             verifyCallback={response => {

@@ -69,4 +69,4 @@ yarn-error.log
 .yarn-integrity
 
 #google recaptcha keysite
-.env*.local
+.env.*
