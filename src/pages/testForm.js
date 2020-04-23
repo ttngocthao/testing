@@ -10,7 +10,6 @@ const encode = data => {
 }
 
 function TestForm() {
-  //console.log(process.env.SITE_RECAPTCHA_KEY)
   const [token, setToken] = useState(null)
   useEffect(() => {
     const script = document.createElement("script")
