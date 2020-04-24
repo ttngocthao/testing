@@ -1,34 +1,9 @@
-import React from "react"
-import { navigate } from "gatsby-link"
-import { useFormik } from "formik"
-import Input from "./Input"
-import Button from "../Buttons/Button"
+import React, { useState, useEffect } from "react"
+import { navigate } from "gatsby"
+import { Formik, Field, Form, ErrorMessage } from "formik"
 import styles from "./contactForm.module.scss"
-
-const validate = values => {
-  const errors = {}
-  if (!values.name) {
-    errors.name = "Required"
-  } else if (values.name.length > 15) {
-    errors.name = "Must be 15 characters or less"
-  } else if (values.name.length < 3) {
-    errors.name = "Must be more than 3 characters"
-  }
-
-  if (!values.message) {
-    errors.message = "Required"
-  } else if (values.message.length > 225) {
-    errors.message = "Must be 225 characters or less"
-  }
-
-  if (!values.email) {
-    errors.email = "Required"
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Invalid email address"
-  }
-
-  return errors
-}
+import Recaptcha from "react-recaptcha"
+import Button from "../Buttons/Button"
 
 const encode = data => {
   return Object.keys(data)
@@ -37,86 +12,117 @@ const encode = data => {
 }
 
 function ContactForm() {
-  const formik = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-    validate,
-    onSubmit: values => {
-      //console.log(JSON.stringify(values, null, 2))
-      return values
-    },
-  })
-  const handleSubmit = e => {
-    e.preventDefault()
-    const values = formik.onSubmit
-    const form = e.target
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        values,
-      }),
-    })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error))
-  }
+  const [token, setToken] = useState(null)
+  useEffect(() => {
+    const script = document.createElement("script")
+    script.src = "https://www.google.com/recaptcha/api.js"
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
+  }, [])
   return (
-    <form
-      className={styles.form}
-      onSubmit={handleSubmit}
-      name="contact"
-      method="post"
-      action="/thanks/"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      data-netlify-recaptcha="true"
+    <Formik
+      initialValues={{
+        fullName: "",
+        email: "",
+        message: "",
+      }}
+      validate={values => {
+        const errors = {}
+        if (!values.fullName) {
+          errors.fullName = "Required"
+        } else if (values.fullName.length <= 1) {
+          errors.fullName = "must be at least 2 characters"
+        }
+        if (!values.email) {
+          errors.email = "Required"
+        } else if (
+          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+        ) {
+          errors.email = "Invalid email address"
+        }
+        if (!values.message) {
+          errors.message = "Required"
+        } else if (values.message.length > 300) {
+          errors.message = "must be less than 300 characters"
+        }
+        return errors
+      }}
+      onSubmit={(data, { resetForm }) => {
+        if (token !== null) {
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({
+              "form-name": "contact-form",
+              ...data,
+              "g-recaptcha-response": token,
+            }),
+          })
+            .then(() => {
+              navigate("/thanks/")
+            })
+            .catch(error => alert(error))
+        } else {
+          alert("recaptcha needed")
+        }
+      }}
     >
-      <input type="hidden" name="form-name" value="contact" />{" "}
-      {/*this is for netlify to work*/}
-      <h2 className={styles.title}>Get in touch</h2>
-      <h5 className={styles.text}>
-        Contact us to find out how we can help you.
-      </h5>
-      <Input
-        className="testing"
-        id="name"
-        name="name"
-        label="Your name:"
-        onChange={formik.handleChange}
-        value={formik.values.firstName}
-        onBlur={formik.handleBlur}
-        errorMsg={formik.errors.name}
-      />
-      {/* {formik.errors.name ? <div>{formik.errors.name}</div> : null} */}
-      <Input
-        className="testing"
-        name="email"
-        id="email"
-        label="Your email:"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.firstName}
-        errorMsg={formik.errors.email}
-      />
-      <Input
-        className="testing"
-        name="message"
-        id="message"
-        label="Your message:"
-        textBox={true}
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.firstName}
-        errorMsg={formik.errors.message}
-      />
-      <Button formSubmit orangeBtn>
-        Submit
-      </Button>
-    </form>
+      <Form
+        className={styles.form}
+        data-netlify="true"
+        name="contact-form"
+        data-netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true"
+      >
+        <Field type="hidden" name="form-name" />
+        <Field type="hidden" name="bot-field" />
+        <h2 className={styles.title}>Get in touch</h2>
+        <h5 className={styles.text}>
+          Contact us to find out how we can help you.
+        </h5>
+
+        <div className={styles.inputWrap}>
+          <label htmlFor="fullName">Full name:</label>
+          <Field name="fullName" type="text" />
+          <span className={styles.errorMessage}>
+            <ErrorMessage name="fullName" />
+          </span>
+        </div>
+
+        <div className={styles.inputWrap}>
+          <label htmlFor="email">Email</label>
+          <Field name="email" type="text" />
+          <span className={styles.errorMessage}>
+            <ErrorMessage name="email" />
+          </span>
+        </div>
+
+        <div className={styles.inputWrap}>
+          <label htmlFor="message">Message</label>
+          <Field name="message" type="text" as="textarea" />
+          <span className={styles.errorMessage}>
+            <ErrorMessage name="message" />
+          </span>
+        </div>
+        <br />
+        <Recaptcha
+          sitekey={process.env.SITE_RECAPTCHA_KEY}
+          render="explicit"
+          theme="dark"
+          verifyCallback={response => {
+            setToken(response)
+          }}
+          onloadCallback={() => {
+            console.log("done loading!")
+          }}
+        />
+        <br />
+        <Button formSubmit orangeBtn>
+          Submit
+        </Button>
+      </Form>
+    </Formik>
   )
 }
 

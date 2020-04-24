@@ -73,6 +73,7 @@ function TestForm() {
         >
           <Field type="hidden" name="form-name" />
           <Field type="hidden" name="bot-field" />
+
           <label htmlFor="fullName">Full name:</label>
           <Field name="fullName" type="text" />
           <ErrorMessage name="fullName" />
@@ -93,9 +94,6 @@ function TestForm() {
           />
           <br />
           <button type="submit">Submit</button>
-          <pre>{JSON.stringify(values, null, 2)}</pre>
-          <pre>{JSON.stringify(errors, null, 2)}</pre>
-          <pre>{JSON.stringify(token)}</pre>
         </Form>
       )}
     </Formik>
