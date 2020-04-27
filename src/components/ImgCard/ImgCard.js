@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./imgCard.module.scss"
-function ImgCard({ src, alt, className, width, height }) {
+function ImgCard({ src, alt, className, width, height, caption }) {
   return (
     <figure className={className}>
       <img
@@ -10,6 +10,7 @@ function ImgCard({ src, alt, className, width, height }) {
         width={width}
         height={height}
       />
+      {caption ? <figcaption>{caption}</figcaption> : null}
     </figure>
   )
 }

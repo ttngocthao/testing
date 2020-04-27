@@ -1,4 +1,7 @@
 import React from "react"
+
+import Section from "../Section/Section"
+
 import MarkLImg from "../../images/about/staff/Mark L.png"
 import MarkBImg from "../../images/about/staff/Mark B.png"
 import BeckyImg from "../../images/about/staff/Becky.png"
@@ -36,12 +39,23 @@ var staffData = [
 ]
 function StaffList() {
   return (
-    <ul className={styles.staffList}>
-      {staffData &&
-        staffData.map((item, indx) => {
-          return <StaffCard itemData={item} key={indx} />
-        })}
-    </ul>
+    <Section
+      title="Our people"
+      titleColor="green"
+      titleCenter={true}
+      id="people"
+    >
+      <p className="text--center">
+        A diverse team of creative designers and developers headed up by a very
+        experienced group of directors.
+      </p>
+      <ul className={styles.staffList}>
+        {staffData &&
+          staffData.map((item, indx) => {
+            return <StaffCard itemData={item} key={indx} />
+          })}
+      </ul>
+    </Section>
   )
 }
 export default StaffList

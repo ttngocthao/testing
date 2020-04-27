@@ -1,5 +1,6 @@
 import React from "react"
 import CountUpItem from "./CountUpItem"
+
 import styles from "./countUp.module.scss"
 const countItemData = [
   { end: 25, topText: "IN BUSINESS FOR", bottomText: "year", unit: null },
@@ -17,10 +18,12 @@ const countItemData = [
     unit: null,
   },
 ]
-function CountUpList() {
+function CountUpList({ id }) {
   return (
-    <section className={styles.section}>
-      <h4 className={styles.title}>A FEW FACTS ABOUT US</h4>
+    <section className={styles.section} id="fact">
+      <h4 className={styles.title}>
+        <span></span>A FEW FACTS ABOUT US
+      </h4>
       <ul className={styles.countList}>
         {countItemData &&
           countItemData.map((item, index) => {

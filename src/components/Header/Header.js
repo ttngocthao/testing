@@ -41,11 +41,12 @@ function Header() {
             menuOpened ? styles.menuListShow : ""
           }`}
         >
+          <MenuItem url="/" text="HOME" />
           <MenuItem url="/about" text="ABOUT" />
           <MenuItem url="/expertise" text="EXPERTISE" />
           <MenuItem url="/work" text="WORK" />
           <MenuItem url="/contact" text="CONTACT" />
-          <MenuItem url="/" text="BLOG ?" />
+          <MenuItem url="/blog" text="BLOG" />
         </ul>
       </nav>
     </header>

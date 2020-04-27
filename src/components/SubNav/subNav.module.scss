@@ -4,11 +4,13 @@
   width: 100%;
   background-color: white;
   margin: 0 auto;
+  z-index: 10;
 
   &.subNavSticky {
     position: fixed;
     top: 62px;
     left: 0;
+
   }
 }
 
@@ -20,7 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10px;
+  padding: 30px 10px 10px;
 
 
 
@@ -29,10 +31,13 @@
 
 .subNavItem {
   text-transform: uppercase;
+
+  &.subNavItemActive {
+    a {
+      border-bottom: 3px solid $mainOrange;
+      padding-bottom: 2.5px;
+    }
+  }
 }
 
 //this one not test if it works
-.subNavItem.subNavItemActive a {
-  border-bottom: 3px solid $mainOrange;
-  padding-bottom: 2.5px;
-}

@@ -21,7 +21,11 @@ const navItemList = [
   { linkUrl: "#clients", linkText: "clients" },
 ]
 
-function About() {
+function About({ location }) {
+  // useEffect(() => {
+  //   configureAnchors({ offset: -200, scrollDuration: 400 })
+  // })
+  console.log("location", location)
   return (
     <Layout>
       <SEO
@@ -29,7 +33,11 @@ function About() {
         description="Give information about company CEO and employees. Provide more details of our clients"
       />
 
-      <PageTitleSubNavWrap pageTitle="about us" navItemList={navItemList} />
+      <PageTitleSubNavWrap
+        pageTitle="about us"
+        navItemList={navItemList}
+        location={location}
+      />
 
       <Section
         title="Brand development &#38; communications"
@@ -46,15 +54,11 @@ function About() {
           mediums.
         </p>
         <SpecCardList />
-        <CountUpList />
       </Section>
-      <Section title="Our people" titleColor="green" titleCenter={true}>
-        <p className="text--center">
-          A diverse team of creative designers and developers headed up by a
-          very experienced group of directors.
-        </p>
-        <StaffList />
-      </Section>
+      <CountUpList />
+      <section id="testing"></section>
+      <StaffList />
+
       <Section
         title="We build relationships"
         titleColor="darkBlue"
@@ -62,14 +66,9 @@ function About() {
       >
         <TestimonyList />
       </Section>
-      <Section
-        title="Our clients"
-        subTitle="SOME OF THE GREAT BUSINESSES WE WORK WITH"
-        titleColor="mainOrange"
-        titleCenter={true}
-      >
-        <OurClients />
-      </Section>
+
+      <OurClients />
+
       <Section
         title="Quality Assurance"
         subTitle="ISO 9001 QUALITY MANAGEMENT CERTIFIED BY BSI, FS707737"

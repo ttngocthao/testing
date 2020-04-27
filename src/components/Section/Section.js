@@ -9,13 +9,15 @@ function Section({
   children,
   subTitle2,
   titleCenter,
+  id,
 }) {
   return (
-    <section className={styles.sectionWrap}>
+    <section className={styles.sectionWrap} id={id}>
       <h2
         className={`text--bold heading2 text--${titleColor} ${titleCenter &&
-          "text--center"} padding-bottom--10`}
+          "text--center"} padding-bottom--10 padding-top--10 ${styles.title}`}
       >
+        <span></span>
         {title}
       </h2>
       {subTitle && <h4 className={styles.sectionSubTitle}>{subTitle}</h4>}

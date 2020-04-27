@@ -62,5 +62,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-minify`,
     },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
+      },
+    },
+    { resolve: `gatsby-plugin-smoothscroll` },
   ],
 }

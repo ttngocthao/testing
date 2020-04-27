@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { navigate } from "gatsby-link"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
@@ -7,8 +7,6 @@ import ImgCard from "../components/ImgCard/ImgCard"
 import styles from "../styles/pages/thanks.module.scss"
 
 function Thanks() {
-  // style="max-width:400px;margin:0 auto!important;text-align:center;"
-  // const [directToHomePage,setDirectToHomePage]= useState(false)
   useEffect(() => {
     setTimeout(() => {
       navigate("/")

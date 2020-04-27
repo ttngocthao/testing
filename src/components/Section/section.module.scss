@@ -1,5 +1,11 @@
 .sectionWrap {
-  padding: 30px 10px;
+  padding: 60px 10px;
+  //margin-top: 80px;
+
+  &:target {
+    padding-top: 125px;
+
+  }
 }
 
 .sectionSubTitle {
@@ -7,4 +13,13 @@
   padding-bottom: 20px;
   text-align: center;
   font-size: 18px;
+}
+
+.title {
+  position: relative;
+
+  span {
+    position: absolute;
+    top: -200px;
+  }
 }

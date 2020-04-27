@@ -1,0 +1,18 @@
+.mapWrap {
+  position: relative;
+  min-height: 300px;
+  margin: 20px auto;
+}
+
+.markerPin {
+  width: 30px;
+
+}
+
+.info {
+  position: absolute;
+  width: 100px;
+  background-color: #b7b7b7;
+  top: 0;
+  left: 0;
+}

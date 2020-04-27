@@ -47,6 +47,9 @@ function Footer() {
               )
             })}
       </ul>
+      <p className="text--white text--center text--xsmall">
+        ArtHaus Visual Communications - Old Brewery Lane, Henley - RG9 2DE
+      </p>
       <p className="text--white text--center text--small">
         <Link to="/terms-and-condition">Privacy, terms &#38; conditions</Link>
       </p>

@@ -3,6 +3,7 @@ import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import "../../styles/styles.scss"
 import styles from "./layout.module.scss"
+
 function Layout({ ...props }) {
   return (
     <Fragment>

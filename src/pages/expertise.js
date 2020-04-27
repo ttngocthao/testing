@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
-import PageTitle from "../components/PageTiltle/PageTitle"
-import SubNavBar from "../components/SubNav/SubNavBar"
+import PageTitleSubNavWrap from "../components/PageTitleSubNaWrap/PageTitleSubNavWrap"
 import Section from "../components/Section/Section"
 import BrandingImgUrl from "../images/expertise/branding.png"
 import CommunicationsImgUrl from "../images/expertise/communications.png"
 import DigitalImgUrl from "../images/expertise/digital.png"
 import ImgCard from "../components/ImgCard/ImgCard"
+import ContactForm from "../components/ContactForm/ContactForm"
 
 const navItemList = [
   { linkUrl: "#branding", linkText: "branding" },
@@ -15,19 +15,24 @@ const navItemList = [
   { linkUrl: "#digital", linkText: "digital" },
 ]
 
-function expertise() {
+function expertise({ location }) {
   return (
     <Layout>
       <SEO
         title="Arthaus Visual Communications - Expertise"
         description="Branding, digital marketing, communications"
       />
-      <PageTitle pageTitle="expertise" />
-      <SubNavBar navItemList={navItemList} />
+      <PageTitleSubNavWrap
+        pageTitle="expertise"
+        navItemList={navItemList}
+        location={location}
+      />
+
       <Section
         title="Branding"
         titleColor="burgendy"
         subTitle2="Develop, nurture, protect &#38; build"
+        id="branding"
       >
         <ImgCard
           className="padding-bottom--5"
@@ -46,10 +51,12 @@ function expertise() {
           events.
         </p>
       </Section>
+      <section className="testing"></section>
       <Section
         title="Communications"
         titleColor="darkBlue"
         subTitle2="Enable, engage &#38; inspire"
+        id="communications"
       >
         <ImgCard
           className="padding-bottom--5"
@@ -70,10 +77,12 @@ function expertise() {
           talent or communicate change, we can help.
         </p>
       </Section>
+      <section className="testing"></section>
       <Section
         title="Digital"
         titleColor="green"
         subTitle2="Concept, solutioning, design, development, delivery &#38; support"
+        id="digital"
       >
         <ImgCard
           className="padding-bottom--5"
@@ -92,7 +101,7 @@ function expertise() {
           capability and ‘real world‘ pragmatism makes us a great partner.
         </p>
       </Section>
-      <div>Contact Form here</div>
+      <ContactForm />
     </Layout>
   )
 }

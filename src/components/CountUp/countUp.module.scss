@@ -1,11 +1,16 @@
 @import '../../styles/components/variables.scss';
 
 .section {
-  padding-top: 60px;
+  padding: 70px 0 0;
+
+  &:target {
+    padding-top: 125px;
+
+  }
 }
 
 .countList {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .title {
@@ -13,6 +18,12 @@
   padding-bottom: 20px;
   text-align: center;
   font-size: 18px;
+  position: relative;
+
+  span {
+    position: absolute;
+    top: -250px;
+  }
 }
 
 .text {

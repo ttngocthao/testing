@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useRef, useEffect } from "react"
 import PageTitle from "../PageTiltle/PageTitle"
 import SubNavBar from "../SubNav/SubNavBar"
-function PageTitleSubNavWrap({ pageTitle, navItemList }) {
+function PageTitleSubNavWrap({ pageTitle, navItemList, location }) {
   const [navSticky, setNavSticky] = useState(false)
   const ref = useRef(null)
   const handleScroll = () => {
@@ -23,7 +23,11 @@ function PageTitleSubNavWrap({ pageTitle, navItemList }) {
   return (
     <Fragment>
       <PageTitle pageTitle={pageTitle} reference={ref} />
-      <SubNavBar navItemList={navItemList} navSticky={navSticky} />
+      <SubNavBar
+        navItemList={navItemList}
+        navSticky={navSticky}
+        location={location}
+      />
     </Fragment>
   )
 }

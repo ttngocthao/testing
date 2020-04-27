@@ -1,5 +1,7 @@
 import React from "react"
 
+import Section from "../Section/Section"
+
 import DiageoImg from "../../images/about/clients/diageo_logo.png"
 import WaveImg from "../../images/about/clients/waves_logo.png"
 import ItvImg from "../../images/about/clients/itv_logo.png"
@@ -40,19 +42,27 @@ const ClientsData = [
 
 function OurClients() {
   return (
-    <div className={styles.clientLogoList}>
-      {ClientsData &&
-        ClientsData.map(({ src, alt }, indx) => {
-          return (
-            <ImgCard
-              key={indx}
-              src={src}
-              alt={alt}
-              className={styles.clientLogo}
-            />
-          )
-        })}
-    </div>
+    <Section
+      title="Our clients"
+      subTitle="SOME OF THE GREAT BUSINESSES WE WORK WITH"
+      titleColor="mainOrange"
+      titleCenter={true}
+      id="clients"
+    >
+      <div className={styles.clientLogoList}>
+        {ClientsData &&
+          ClientsData.map(({ src, alt }, indx) => {
+            return (
+              <ImgCard
+                key={indx}
+                src={src}
+                alt={alt}
+                className={styles.clientLogo}
+              />
+            )
+          })}
+      </div>
+    </Section>
   )
 }
 
