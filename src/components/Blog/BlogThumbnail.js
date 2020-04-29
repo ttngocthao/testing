@@ -1,11 +1,27 @@
 import React from "react"
-
-function BlogThumbnail() {
+import { Link, graphql, StaticQuery } from "gatsby"
+function BlogThumbnail({ data }) {
+  const { node: postData } = data
+  const { id, frontmatter } = postData
   return (
     <li>
-      <h1>Post Title</h1>
+      <h2>{frontmatter.title}</h2>
+      <p>{id}</p>
+      <p>{frontmatter.shortIntro}</p>
+      <Link to={frontmatter.path}>Read more</Link>
     </li>
   )
 }
 
 export default BlogThumbnail
+// export const postQuery = graphql`
+//   query MyQuery {
+//     markdownRemark(frontmatter: {}) {
+//       frontmatter {
+//         date(fromNow: true)
+//         path
+//         title
+//       }
+//     }
+//   }
+// `

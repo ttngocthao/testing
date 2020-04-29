@@ -3,7 +3,7 @@ backend:
   repo: ttngocthao/training_2020
   branch: AH
 media_folder: src/images/blog
-public_folder: assets
+public_folder: /asset/images/blog
 
 collections:
   - name: blog
@@ -14,4 +14,5 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: shortIntro, label: Introduction, widget: string }
       - { name: body, label: Body, widget: markdown }
