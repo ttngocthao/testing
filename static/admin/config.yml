@@ -2,8 +2,7 @@ backend:
   name: github
   repo: ttngocthao/training_2020
   branch: AH
-media_folder: src/images/blog
-public_folder: /asset
+media_folder: images/blog
 
 collections:
   - name: blog

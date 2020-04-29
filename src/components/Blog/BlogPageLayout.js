@@ -9,7 +9,6 @@ function BlogPageLayout({ data }) {
     <Layout>
       {post && (
         <>
-          {" "}
           <h1>{post.frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </>

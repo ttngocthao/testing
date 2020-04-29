@@ -12,6 +12,7 @@ function BlogList() {
               title
               path
               shortIntro
+              thumbnailImg
             }
             html
           }
