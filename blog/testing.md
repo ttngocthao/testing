@@ -8,6 +8,6 @@ thumbnailImg: /images/blog/myphoto.jpg
 
 Testing post for deployment
 
-below is a testing image
+below is a testing image. just rebase the project.
 
 ![](/images/blog/pic6.jpg)
