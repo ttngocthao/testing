@@ -3,6 +3,7 @@ backend:
   repo: ttngocthao/training_2020
   branch: AH
 media_folder: /public/images/blog
+public_folder: /images/blog
 
 collections:
   - name: blog

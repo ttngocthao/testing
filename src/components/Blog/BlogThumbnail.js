@@ -5,7 +5,7 @@ function BlogThumbnail({ data }) {
   const { id, frontmatter } = postData
   return (
     <li>
-      <figure style={{ width: "100px" }}>
+      <figure style={{ width: "50px" }}>
         <img src={frontmatter.thumbnailImg} />
       </figure>
       <h2>{frontmatter.title}</h2>
