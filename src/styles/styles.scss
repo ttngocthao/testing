@@ -12,7 +12,7 @@
 html {
   font-size: 16px;
   font-family: "Lato-Reg", sans-serif;
-  line-height: 1.2 !important;
+  line-height: 1.4;
   box-sizing: border-box;
   font-weight: 300;
 }
@@ -68,7 +68,7 @@ a {
 
 
 .heading1 {
-  font-family: 'Lato-Black';
+  font-family: 'Lato-Black', sans-serif;
   font-size: 40px;
   font-weight: 900;
 
@@ -76,12 +76,12 @@ a {
 
 .heading2 {
   font-size: 30px;
-  font-family: 'Lato-Black';
+  font-family: 'Lato-Black', sans-serif;
 }
 
 .heading3 {
   font-size: 21px;
-  font-family: 'Lato-Black';
+  font-family: 'Lato-Black', sans-serif;
 }
 
 .heading4 {
@@ -211,20 +211,20 @@ $borderThickness: 3,
 //   margin-top: -250px;
 // }
 // #fact {
-  //   padding-top: 120px;
-  // }
+//   padding-top: 120px;
+// }
 
-  // #people {
-  //   // background-color: yellow;
-  //   padding-top: 120px;
-  // }
+// #people {
+//   // background-color: yellow;
+//   padding-top: 120px;
+// }
 
-  // #clients {
-  //   // background-color: green;
-  //   padding-top: 120px;
-  // }
+// #clients {
+//   // background-color: green;
+//   padding-top: 120px;
+// }
 
-  // #testing,
-  // .testing {
-  //   height: 60px;
-  // }
+// #testing,
+// .testing {
+//   height: 60px;
+// }

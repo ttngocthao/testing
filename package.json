@@ -50,6 +50,7 @@
     "react-visibility-sensor": "^5.1.1"
   },
   "devDependencies": {
+    "@types/react": "^16.9.35",
     "babel-preset-gatsby": "^0.3.1",
     "prettier": "^1.19.1",
     "resolve-url-loader": "^3.1.1"

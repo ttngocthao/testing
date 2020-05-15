@@ -1,0 +1,37 @@
+@import '../../styles/components/variables.scss';
+
+.heroImg {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.paragraph {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.exampleImg {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.link {
+  border: 2px solid #f28b00;
+  padding: 10px 15px;
+  margin-top: 30px;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: $mainOrange;
+  font-weight: bold;
+
+  &::after {
+    content: '›';
+    padding-left: 5px;
+  }
+
+  &:hover {
+    color: $mainOrange;
+  }
+}
