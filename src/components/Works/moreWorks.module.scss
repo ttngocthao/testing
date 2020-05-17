@@ -1,0 +1,43 @@
+@import '../../styles/components/variables.scss';
+
+.item {
+  max-width: 260px;
+  border-top: 3px solid;
+  position: relative;
+  transition: .3s ease-in-out;
+  margin-bottom: 20px;
+
+  top: 0;
+  box-shadow: 1px 1px 4px 2px lightgrey;
+
+  &:nth-child(3n+1) {
+    border-color: $burgendy;
+  }
+
+  &:nth-child(3n+2) {
+    border-color: $green;
+  }
+
+  &:nth-child(3n) {
+    border-color: $darkBlue;
+  }
+}
+
+.itemLink {
+  display: block;
+  text-decoration: none;
+}
+
+.itemTitle {
+  color: #878679;
+  text-align: center;
+  font-family: Lato-Black;
+  font-size: 17px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.itemImg {
+  max-width: 260px;
+  vertical-align: bottom;
+}
