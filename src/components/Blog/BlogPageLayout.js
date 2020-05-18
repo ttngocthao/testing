@@ -1,18 +1,15 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../Layout/Layout"
-
+import PageTitle from "../PageTiltle/PageTitle"
 function BlogPageLayout({ data }) {
   const post = data && data.markdownRemark
 
   return (
     <Layout>
-      {post && (
-        <>
-          <h1>{post.frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </>
-      )}
+      <Link to="/blog">Back to Blog page</Link>
+      <PageTitle pageTitle={post.frontmatter.title} />
+      {post && <div dangerouslySetInnerHTML={{ __html: post.html }} />}
     </Layout>
   )
 }

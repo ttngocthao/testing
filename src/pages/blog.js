@@ -1,12 +1,15 @@
 import React from "react"
 import BlogList from "../components/Blog/BlogList"
+import Layout from "../components/Layout/Layout"
+import PageTitle from "../components/PageTiltle/PageTitle"
 
 function Blog() {
   return (
-    <div>
-      <h1>Hello</h1>
+    <Layout>
+      <PageTitle pageTitle="Tool Kits" />
+
       <BlogList />
-    </div>
+    </Layout>
   )
 }
 
