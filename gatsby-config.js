@@ -47,10 +47,10 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: { path: `./src/images/` },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: { name: `blogs`, path: `./assets/blog/` },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: { name: `blogs`, path: `./assets/blog/` },
+    // },
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
