@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import ImgCard from "../ImgCard/ImgCard"
+import styles from "./blog.module.scss"
 function BlogThumbnail({ data }) {
   const { node: postData } = data
   const { id, frontmatter } = postData
