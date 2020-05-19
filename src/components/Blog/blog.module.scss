@@ -1,0 +1,43 @@
+@import '../../styles/components/variables.scss';
+
+.blogList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnailItem {
+  max-width: 250px;
+  padding: 10px 15px;
+
+}
+
+.thumbnailIntro {
+  padding-bottom: 5px;
+
+  font-size: 14px;
+}
+
+.thumbnailTitle {
+  padding-top: 5px;
+
+  font-size: 21px;
+  font-family: 'Lato-Black', sans-serif;
+}
+
+.thumbnailLink {
+  display: block;
+  padding-bottom: 20px;
+  text-align: right;
+}
+
+
+@for $i from 1 through 6 {
+  .thumbnailItem:nth-child(6n + #{$i}) .thumbnailTitle {
+    color: nth($ColorList, $i);
+  }
+
+  .thumbnailItem:nth-child(6n+ #{$i}) .thumbnailLink {
+    border-bottom: 2px solid nth($ColorList, $i);
+  }
+}
