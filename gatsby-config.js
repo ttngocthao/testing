@@ -39,14 +39,17 @@ module.exports = {
     { resolve: "gatsby-plugin-react-helmet" },
     { resolve: "gatsby-transformer-sharp" },
     { resolve: "gatsby-plugin-sharp" },
-    { resolve: `gatsby-source-filesystem`, options: { path: `./src/data/` } },
     {
       resolve: `gatsby-source-filesystem`,
-      options: { path: `./src/images` },
+      options: { path: `${__dirname}/src/data/` },
     },
     {
       resolve: `gatsby-source-filesystem`,
-      options: { path: `./assets/blog` },
+      options: { path: `${__dirname}./src/images` },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `blogs`, path: `${__dirname}/assets/blog` },
     },
     {
       resolve: "gatsby-plugin-html-attributes",
