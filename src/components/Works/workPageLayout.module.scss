@@ -1,0 +1,62 @@
+@import '../../styles/components/variables.scss';
+
+.heroImg {
+  max-width: 1000px;
+  margin: 2.83% auto;
+}
+
+.paragraph {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5% 10px;
+}
+
+.exampleImg {
+  max-width: 800px;
+  margin: 3.48% auto;
+}
+
+.link {
+  border: 2px solid #f28b00;
+  padding: 10px 15px;
+  margin-top: 4%;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: $mainOrange;
+  font-weight: bold;
+
+  &::after {
+    content: '›';
+    padding-left: 5px;
+  }
+
+  &:hover {
+    color: $mainOrange;
+  }
+}
+
+.otherWorkListTitle {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: $midGray;
+  font-size: 40px;
+  letter-spacing: 1px;
+  padding: 3.95% 10px;
+  font-family: Lato-Black;
+  text-align: center;
+}
+
+.otherWorkList {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 3.95%;
+
+  @media only screen and (min-width:900px) {
+    justify-content: space-between;
+  }
+
+}

@@ -8,7 +8,14 @@ import WavesImg from "../images/home/waves-app.png"
 import AgnovosImg from "../images/home/agnovos-website.png"
 import AboutUsImg from "../images/home/about-us.png"
 import DiageoImg from "../images/home/diageo-tech-cafe.png"
-
+import AgnovosWorkImg from "../images/work/agnovos.png"
+import HsbcMentorWorkImg from "../images/work/HSBCMentoring.png"
+import BupaWorkImg from "../images/work/BupaTalent.png"
+import DiageoTechWorkImg from "../images/work/diageoTechcafe.png"
+import HsbcUniWorkImg from "../images/work/HSBCUniversity.png"
+import SsyWorkImg from "../images/work/SSY.png"
+import WaveWorkImg from "../images/work/Waves.png"
+import DiageoWorkPlaceImg from "../images/work/DiageoWorkplace.png"
 export const gridHomeData = [
   new GridItemData(
     "type-a",
@@ -186,4 +193,55 @@ export const gridHomeData = [
     true,
     false
   ),
+]
+
+export const caseStudyData = [
+  {
+    linkUrl: "/agnovos",
+    title: "AgNovos website",
+    imgUrl: AgnovosWorkImg,
+    type: "digital",
+  },
+  {
+    linkUrl: "/hsbc-mentoring-portal",
+    title: "HSBC Mentoring",
+    imgUrl: HsbcMentorWorkImg,
+    type: "digital",
+  },
+  {
+    linkUrl: "/bupa",
+    title: "Bupa talent toolkit",
+    imgUrl: BupaWorkImg,
+    type: "communications",
+  },
+  {
+    linkUrl: "/diageo-techcafe",
+    title: "Diageo Tech Cafe",
+    imgUrl: DiageoTechWorkImg,
+    type: "branding",
+  },
+  {
+    linkUrl: "/hsbc-university",
+    title: "HSBC University",
+    imgUrl: HsbcUniWorkImg,
+    type: "branding",
+  },
+  {
+    linkUrl: "/simpson-spence-young",
+    title: "Simpson Spence Young",
+    imgUrl: SsyWorkImg,
+    type: "branding",
+  },
+  {
+    linkUrl: "/waves",
+    title: "Waves booking app",
+    imgUrl: WaveWorkImg,
+    type: "digital",
+  },
+  {
+    linkUrl: "/diageo-workplace",
+    title: "Diageo Workplace",
+    imgUrl: DiageoWorkPlaceImg,
+    type: "communications",
+  },
 ]
