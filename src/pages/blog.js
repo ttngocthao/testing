@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import BlogList from "../components/Blog/BlogList"
 import PageTitle from "../components/PageTiltle/PageTitle"
+import SEO from "../components/SEO/SEO"
 
 function Blog() {
   return (
