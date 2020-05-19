@@ -41,15 +41,15 @@ module.exports = {
     { resolve: "gatsby-plugin-sharp" },
     {
       resolve: `gatsby-source-filesystem`,
-      options: { path: `${__dirname}/src/data/` },
+      options: { path: `/src/data/` },
     },
     {
       resolve: `gatsby-source-filesystem`,
-      options: { path: `${__dirname}./src/images/` },
+      options: { path: `./src/images/` },
     },
     {
       resolve: `gatsby-source-filesystem`,
-      options: { name: `blogs`, path: `${__dirname}/assets/blog/` },
+      options: { name: `blogs`, path: `/assets/blog/` },
     },
     {
       resolve: "gatsby-plugin-html-attributes",
