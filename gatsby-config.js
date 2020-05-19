@@ -45,11 +45,11 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-filesystem`,
-      options: { path: `${__dirname}./src/images` },
+      options: { path: `${__dirname}./src/images/` },
     },
     {
       resolve: `gatsby-source-filesystem`,
-      options: { name: `blogs`, path: `${__dirname}/assets/blog` },
+      options: { name: `blogs`, path: `${__dirname}/assets/blog/` },
     },
     {
       resolve: "gatsby-plugin-html-attributes",
