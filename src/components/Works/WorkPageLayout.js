@@ -7,7 +7,7 @@ import styles from "./workPageLayout.module.scss"
 import ShowMoreWorks from "./ShowMoreWorks"
 import ContactForm from "../ContactForm/ContactForm"
 function WorkPageLayout({ pageTile, heroSrc, paragraphs }) {
-  const currentPage = window.location.pathname
+  const currentPage = window && window.location.pathname
   const indexInArr = caseStudyData.findIndex(
     item => item.linkUrl === currentPage
   )
