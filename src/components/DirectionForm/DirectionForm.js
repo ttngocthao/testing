@@ -30,7 +30,7 @@ function DirectionForm() {
         const directionsUrl =
           "https://www.google.com/maps/dir/?" +
           new URLSearchParams(directionParams).toString()
-        window && window.open(directionsUrl, "_blank")
+        window.open(directionsUrl, "_blank")
       }}
     >
       <Form name="direction-form" className={styles.form}>

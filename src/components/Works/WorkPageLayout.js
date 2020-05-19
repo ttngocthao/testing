@@ -7,24 +7,27 @@ import styles from "./workPageLayout.module.scss"
 import ShowMoreWorks from "./ShowMoreWorks"
 import ContactForm from "../ContactForm/ContactForm"
 function WorkPageLayout({ pageTile, heroSrc, paragraphs }) {
-  const currentPage = window && window.location.pathname
-  const indexInArr = caseStudyData.findIndex(
-    item => item.linkUrl === currentPage
-  )
-  const otherWorks = (currentIndx, itemsShow, data) => {
-    let i = 1
-    let html = []
-    while (i < itemsShow + 1) {
-      if (currentIndx + i > data.length - 1) {
-        currentIndx = -i
+  let otherWorksData
+  if (typeof window !== `undefined`) {
+    const currentPage = window.location.pathname
+    const indexInArr = caseStudyData.findIndex(
+      item => item.linkUrl === currentPage
+    )
+    const otherWorks = (currentIndx, itemsShow, data) => {
+      let i = 1
+      let html = []
+      while (i < itemsShow + 1) {
+        if (currentIndx + i > data.length - 1) {
+          currentIndx = -i
+        }
+        html.push(data[currentIndx + i])
+        i++
       }
-      html.push(data[currentIndx + i])
-      i++
+      return html
     }
-    return html
+    //find an index of current page in the array, display the next 3 items.
+    otherWorksData = otherWorks(indexInArr, 3, caseStudyData)
   }
-  //find an index of current page in the array, display the next 3 items.
-  const otherWorksData = otherWorks(indexInArr, 3, caseStudyData)
 
   return (
     <>
