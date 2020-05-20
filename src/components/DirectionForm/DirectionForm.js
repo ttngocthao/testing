@@ -36,7 +36,12 @@ function DirectionForm() {
       <Form name="direction-form" className={styles.form}>
         <div className={styles.inputWrap}>
           <label htmlFor="postcode" hidden></label>
-          <Field name="postcode" type="text" placeholder="Ex:  RG92DE" />
+          <Field
+            name="postcode"
+            id="postcode"
+            type="text"
+            placeholder="Ex:  RG92DE"
+          />
           <span className={styles.errorMessage}>
             <ErrorMessage name="postcode" />
           </span>

@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react"
 
 import styles from "./googleMap.module.scss"
-import ImgCard from "../ImgCard/ImgCard"
 
 import MarkerImg from "../../images/contact/mappin.png"
 

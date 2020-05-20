@@ -29,6 +29,9 @@ function Header() {
           <ul
             className={`${styles.menuBtn} ${menuOpened && styles.menuOpened}`}
             onClick={menuClickHandle}
+            onKeyPress={() => {
+              console.log("press key")
+            }}
           >
             <li></li>
             <li></li>
