@@ -18,11 +18,11 @@ function BlogPageLayout({ data }) {
     return (
       <div key={key} className={stlyes.para}>
         {paragraphHeading && (
-          <h3 className={stlyes.paraHeading}>{paragraphHeading}</h3>
+          <h2 className={stlyes.paraHeading}>{paragraphHeading}</h2>
         )}
         {paragraphText && <p>{paragraphText}</p>}
         {paragraphLink && (
-          <a href={paragraphLink} className={stlyes.Link}>
+          <a href={paragraphLink} className={stlyes.paraLink}>
             Read more here
           </a>
         )}
@@ -43,10 +43,12 @@ function BlogPageLayout({ data }) {
           <PageTitle pageTitle={title} />
 
           <ImgCard alt="hero blog post" src={thumbnailImg} />
-          {paragraph &&
-            paragraph.map((item, index) => {
-              return displayEachParagraph(item, index)
-            })}
+          <div className={stlyes.paraWrap}>
+            {paragraph &&
+              paragraph.map((item, index) => {
+                return displayEachParagraph(item, index)
+              })}
+          </div>
         </>
       )}
     </Layout>
