@@ -61,7 +61,8 @@ export const query = graphql`
         paragraph {
           paragraphImage
           paragraphText
-          paragrahpLink
+          paragraphLink
+          paragraphHeading
         }
       }
     }
