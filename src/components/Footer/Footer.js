@@ -51,7 +51,7 @@ function Footer() {
         ArtHaus Visual Communications - Old Brewery Lane, Henley - RG9 2DE
       </p>
       <p className="text--white text--center text--small">
-        <Link to="/terms-and-condition">Privacy, terms &#38; conditions</Link>
+        <Link to="/termsAndConditions">Privacy, terms &#38; conditions</Link>
       </p>
       <p className="text--white text--center text--xsmall">
         &#169; Copyright Arthaus {new Date().getFullYear()}
