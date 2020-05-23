@@ -24,7 +24,7 @@ collections:
             [
               {
                 name: paragraphHeading,
-                label: Text,
+                label: Heading,
                 widget: string,
                 required: false,
               },
