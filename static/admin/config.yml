@@ -15,8 +15,29 @@ collections:
       - { name: title, label: Title }
       - { name: shortIntro, label: Introduction, widget: string }
       - { name: thumbnailImg, label: Thumbnail Image, widget: image }
-      - { name: paragraph, label: Paragraph, widget: list, fields: 
-        - {name: paragraphText, label: Text , widget: string, required: false } 
-        - {name: paragraphImage, label: Image , widget: File, required: false } 
-        - {name: paragrahpLink, label: Link, widget: string, required: false}
+      - {
+          name: paragraph,
+          label: Paragraph,
+          widget: list,
+          fields:
+            [
+              {
+                name: paragraphText,
+                label: Text,
+                widget: string,
+                required: false,
+              },
+              {
+                name: paragraphImage,
+                label: Image,
+                widget: File,
+                required: false,
+              },
+              {
+                name: paragrahpLink,
+                label: Link,
+                widget: string,
+                required: false,
+              },
+            ],
         }
