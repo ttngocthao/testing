@@ -6,6 +6,12 @@ function BlogThumbnail({ data }) {
   console.log("finding slug", data)
   const { node: postData } = data
   const { id, frontmatter, fields } = postData
+  const shortenTitle = title => {
+    if (title.length > 22) {
+      title = title.slice(0, 19) + " ..."
+    }
+    return title
+  }
   return (
     <li className={styles.thumbnailItem} blogid={id}>
       <ImgCard
@@ -15,7 +21,9 @@ function BlogThumbnail({ data }) {
         height={220}
       />
 
-      <h3 className={styles.thumbnailTitle}>{frontmatter.title}</h3>
+      <h3 className={styles.thumbnailTitle}>
+        {shortenTitle(frontmatter.title)}
+      </h3>
 
       <p className={styles.thumbnailIntro}>{frontmatter.shortIntro}</p>
       <Link className={styles.thumbnailLink} to={fields.slug}>
