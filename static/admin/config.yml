@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: ttngocthao/training_2020
+  branch: repair
 media_folder: /public/images/blog
 public_folder: /images/blog
 
