@@ -23,6 +23,12 @@ collections:
           fields:
             [
               {
+                name: paragraphHeading,
+                label: Text,
+                widget: string,
+                required: false,
+              },
+              {
                 name: paragraphText,
                 label: Text,
                 widget: string,

@@ -10,6 +10,9 @@ function BlogList() {
         edges {
           node {
             id
+            fields {
+              slug
+            }
             frontmatter {
               title
               path
