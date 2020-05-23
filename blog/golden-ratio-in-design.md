@@ -2,10 +2,7 @@
 path: /goldenRatio
 date: 2020-05-23T17:08:14.681Z
 title: Golden Ratio in Design
-shortIntro: Using these proportions in your design work will take time and
-  practice. But the more you use it, the more you will start to see
-  relationships between elements of your design and begin to spot and correct
-  areas that are inconsistent in your work and just don’t feel right.
+shortIntro: Using these proportions in your design work will take time and practice.
 thumbnailImg: /images/blog/maxresdefault.jpg
 paragraph:
   - paragraphText: "The Golden Ratio is a mathematical ratio. It is commonly found
