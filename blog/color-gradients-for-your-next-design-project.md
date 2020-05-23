@@ -3,11 +3,8 @@ path: /blog/doIneedit
 date: 2020-05-23T16:56:30.362Z
 title: Color Gradients For Your Next Design Project
 shortIntro: Software and design company Itmeo has created a useful online tool
-  called WebGradients – a free collection of 180 linear gradients that you can
-  use as content backdrops in any part of your website. You can download a .PNG
-  version of each gradient and copy their CSS3 cross-browser codes. Sketch and
-  Photoshop packs are available as well. Here are some of our favourites from
-  the collection.
+  called WebGradients – you can use as content backdrops in any part of your
+  website.
 thumbnailImg: /images/blog/gradient-pastel-color-pallete-vector-background.jpg
 paragraph:
   - paragraphHeading: Lady Lips
