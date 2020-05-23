@@ -41,7 +41,7 @@ collections:
                 required: false,
               },
               {
-                name: paragrahpLink,
+                name: paragraphLink,
                 label: Link,
                 widget: string,
                 required: false,
