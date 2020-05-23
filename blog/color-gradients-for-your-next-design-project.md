@@ -3,8 +3,7 @@ path: /blog/doIneedit
 date: 2020-05-23T16:56:30.362Z
 title: Color Gradients For Your Next Design Project
 shortIntro: Software and design company Itmeo has created a useful online tool
-  called WebGradients – you can use as content backdrops in any part of your
-  website.
+  called WebGradients.
 thumbnailImg: /images/blog/gradient-pastel-color-pallete-vector-background.jpg
 paragraph:
   - paragraphHeading: Lady Lips
