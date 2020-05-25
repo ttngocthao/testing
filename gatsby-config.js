@@ -77,12 +77,12 @@ module.exports = {
         name: `markdown-pages`,
       },
     },
-    {
-      resolve: `gatsby-plugin-netlify-identity`,
-      options: {
-        url: `https://nostalgic-curran-576267.netlify.app//`, // required!
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-netlify-identity`,
+    //   options: {
+    //     url: `https://nostalgic-curran-576267.netlify.app//`, // required!
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-netlify-identity-widget",
       // options: {
