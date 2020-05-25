@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: ttngocthao/training_2020
   branch: repair
 media_folder: /public/images/blog

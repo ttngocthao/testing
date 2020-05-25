@@ -5,7 +5,6 @@ import PageTitle from "../components/PageTiltle/PageTitle"
 import GoogleMap from "../components/GoogleMap/GoogleMap"
 import ContactForm from "../components/ContactForm/ContactForm"
 import DirectionForm from "../components/DirectionForm/DirectionForm"
-//import socialMediaIcon from "../components/SocialMediaIcon/SocialMediaIcon"
 
 function contact() {
   return (
