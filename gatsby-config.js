@@ -77,6 +77,12 @@ module.exports = {
         name: `markdown-pages`,
       },
     },
+    {
+      resolve: "gatsby-plugin-netlify-identity-widget",
+      // options: {
+      //   container: '#netlify-modal'
+      // }
+    },
     `gatsby-transformer-remark`,
   ],
 }
