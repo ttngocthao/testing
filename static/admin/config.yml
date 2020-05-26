@@ -2,7 +2,6 @@ backend:
   name: git-gateway
   repo: ttngocthao/training_2020
   branch: repair
-  auth_endpoint: https://nostalgic-curran-576267.netlify.app/.netlify/identity
 media_folder: /public/images/blog
 public_folder: /images/blog
 
