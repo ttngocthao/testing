@@ -1,5 +1,6 @@
 ---
 workTitle: HSBC UNIVERSITY
+title: HSBC UNIVERSITY
 heroImg: /images/hero.png
 content:
   - sectionParagraphs:
