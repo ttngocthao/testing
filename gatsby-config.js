@@ -72,7 +72,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
-        enableIdentityWidget: false,
+        enableIdentityWidget: true,
       },
     },
     {
@@ -88,12 +88,12 @@ module.exports = {
         url: `https://nostalgic-curran-576267.netlify.app`, // required!
       },
     },
-    {
-      resolve: "gatsby-plugin-netlify-identity-widget",
-      // options: {
-      //   container: '#netlify-modal'
-      // }
-    },
+    // {
+    //   resolve: "gatsby-plugin-netlify-identity-widget",
+    // options: {
+    //   container: '#netlify-modal'
+    // }
+    // },
     `gatsby-transformer-remark`,
   ],
 }
