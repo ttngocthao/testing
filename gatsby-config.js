@@ -69,7 +69,12 @@ module.exports = {
       },
     },
     { resolve: `gatsby-plugin-smoothscroll` },
-    { resolve: `gatsby-plugin-netlify-cms` },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        enableIdentityWidget: false,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
