@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   repo: ttngocthao/training_2020
   branch: repair
-media_folder: /public/images/blog
-public_folder: /images/blog
+media_folder: /public/images
+public_folder: /images
 
 collections:
   - name: workspage
@@ -12,7 +12,19 @@ collections:
     create: true
     fields:
       - { name: workTitle, label: Title, widget: string }
-      - { name: heroImg, label: Hero Image, widget: image }
+      - {
+          name: heroImg,
+          label: Hero Image,
+          widget: image,
+          media_library:
+            {
+              config:
+                {
+                  media_folder: "/{{media_folder}}/page/{{workTitle}}",
+                  public_folder: "/{{public_folder}}/page//{{workTitle}}",
+                },
+            },
+        }
       - {
           name: content,
           label: Page Content,
@@ -52,6 +64,14 @@ collections:
                       label: image,
                       widget: image,
                       required: false,
+                      media_library:
+                        {
+                          config:
+                            {
+                              media_folder: "/{{media_folder}}/page/{{workTitle}}",
+                              public_folder: "/{{public_folder}}/page//{{workTitle}}",
+                            },
+                        },
                     },
                   ],
               },
@@ -87,7 +107,19 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: shortIntro, label: Introduction, widget: string }
-      - { name: thumbnailImg, label: Thumbnail Image, widget: image }
+      - {
+          name: thumbnailImg,
+          label: Thumbnail Image,
+          widget: image,
+          media_library:
+            {
+              config:
+                {
+                  media_folder: "/{{media_folder}}/blog/{{title}}",
+                  public_folder: "/{{public_folder}}/blog/{{title}}",
+                },
+            },
+        }
       - {
           name: paragraph,
           label: Paragraph,
@@ -111,6 +143,14 @@ collections:
                 label: Image,
                 widget: image,
                 required: false,
+                media_library:
+                  {
+                    config:
+                      {
+                        media_folder: "/{{media_folder}}/blog/{{title}}",
+                        public_folder: "/{{public_folder}}/blog/{{title}}",
+                      },
+                  },
               },
               {
                 name: paragraphLink,
