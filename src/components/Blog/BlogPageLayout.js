@@ -4,10 +4,11 @@ import Layout from "../Layout/Layout"
 import ImgCard from "../ImgCard/ImgCard"
 import PageTitle from "../PageTiltle/PageTitle"
 import stlyes from "./blog.module.scss"
-function BlogPageLayout({ data }) {
-  const post = data && data.markdownRemark
-  const { title, thumbnailImg, paragraph } = post.frontmatter
-  console.log("blog page layout data", data)
+function BlogPageLayout({ pageContext }) {
+  const { blogItem } = pageContext
+
+  const { title, thumbnailImg, paragraph } = blogItem.frontmatter
+  console.log("blog page layout data", pageContext)
   const displayEachParagraph = (eachParagraph, key) => {
     const {
       paragraphText,
@@ -38,7 +39,7 @@ function BlogPageLayout({ data }) {
   }
   return (
     <Layout>
-      {post && (
+      {pageContext && (
         <>
           <PageTitle pageTitle={title} />
 
@@ -54,20 +55,5 @@ function BlogPageLayout({ data }) {
     </Layout>
   )
 }
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        thumbnailImg
-        paragraph {
-          paragraphImage
-          paragraphText
-          paragraphLink
-          paragraphHeading
-        }
-      }
-    }
-  }
-`
+
 export default BlogPageLayout

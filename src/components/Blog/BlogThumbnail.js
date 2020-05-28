@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import ImgCard from "../ImgCard/ImgCard"
 import styles from "./blog.module.scss"
 function BlogThumbnail({ data }) {
-  console.log("finding slug", data)
+  //console.log("finding slug", data)
   const { node: postData } = data
   const { id, frontmatter, fields } = postData
   const shortenTitle = title => {
@@ -20,15 +20,16 @@ function BlogThumbnail({ data }) {
         width={220}
         height={220}
       />
+      <div className={styles.thumbnailInfo}>
+        <h3 className={styles.thumbnailTitle}>
+          {shortenTitle(frontmatter.title)}
+        </h3>
 
-      <h3 className={styles.thumbnailTitle}>
-        {shortenTitle(frontmatter.title)}
-      </h3>
-
-      <p className={styles.thumbnailIntro}>{frontmatter.shortIntro}</p>
-      <Link className={styles.thumbnailLink} to={fields.slug}>
-        Read more
-      </Link>
+        <p className={styles.thumbnailIntro}>{frontmatter.shortIntro}</p>
+        <Link className={styles.thumbnailLink} to={`blog${fields.slug}`}>
+          Read more
+        </Link>
+      </div>
     </li>
   )
 }

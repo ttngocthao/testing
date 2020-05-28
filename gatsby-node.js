@@ -7,7 +7,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: "/blog" + slug,
+      value: slug,
     })
   }
 }
@@ -20,24 +20,49 @@ exports.createPages = async ({ graphql, actions }) => {
       allMarkdownRemark {
         edges {
           node {
+            frontmatter {
+              title
+              thumbnailImg
+              shortIntro
+              heroImg
+              content {
+                sectionImages {
+                  image
+                }
+                sectionParagraphs {
+                  paragraph
+                }
+              }
+              paragraph {
+                paragraphHeading
+                paragraphImage
+                paragraphLink
+                paragraphText
+              }
+            }
             fields {
               slug
+              sourceName
             }
           }
         }
       }
     }
   `)
-  console.log("here", JSON.stringify(result, null, 4))
+  //  console.log("here", JSON.stringify(result, null, 4))
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve(`./src/components/Blog/BlogPageLayout.js`),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.fields.slug,
-      },
-    })
+    if (node.fields.sourceName === "markdownBlog") {
+      // console.log("path for blog", node)
+      createPage({
+        path: "/blog" + node.fields.slug,
+        component: path.resolve(`./src/components/Blog/BlogPageLayout.js`),
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug: "/blog" + node.fields.slug,
+          blogItem: node,
+        },
+      })
+    }
   })
 }

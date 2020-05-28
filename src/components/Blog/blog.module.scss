@@ -12,9 +12,13 @@
 
 }
 
+.thumbnailInfo {
+  padding: 10px 0 20px;
+}
+
 .thumbnailIntro {
   padding-bottom: 5px;
-
+  min-height: 70px;
   font-size: 14px;
 }
 
@@ -27,7 +31,6 @@
 
 .thumbnailLink {
   display: block;
-  padding-bottom: 20px;
   text-align: right;
 }
 

@@ -9,6 +9,7 @@ collections:
   - name: workspage
     label: works page
     folder: page
+    collectionType: workspage
     path: "{{slug}}/index"
     media_folder: ""
     public_folder: ""

@@ -30,6 +30,7 @@ module.exports = {
     //     ],
     //   },
     // },
+    { resolve: `gatsby-remark-source-name` },
     {
       resolve: "gatsby-plugin-sass",
       options: {
@@ -79,7 +80,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/blog`,
-        name: `markdown-pages`,
+        name: "markdownBlog",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/page`,
+        name: "markdownPage",
       },
     },
     {
