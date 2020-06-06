@@ -7,7 +7,9 @@ export default () => {
   return (
     <Layout>
       <SEO />
-      <h1 className="sr-only">This is home page</h1>
+      <h1 className="sr-only" hidden>
+        This is home page
+      </h1>
       <GridLayout />
     </Layout>
   )
