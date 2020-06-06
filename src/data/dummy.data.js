@@ -35,7 +35,7 @@ export const gridHomeData = [
     "Simpson Spence Young",
     null,
     SsyImg,
-    "/",
+    "/simpson-spence-young",
     true,
     false
   ),
@@ -46,7 +46,7 @@ export const gridHomeData = [
     "Bupa",
     null,
     BupaImg,
-    "/",
+    "/bupa",
     true,
     false
   ),
@@ -79,7 +79,7 @@ export const gridHomeData = [
     "Colour of the Year 2020",
     null,
     ColorOfTheYearImg,
-    "/",
+    "https://www.instagram.com/p/B8GlU12AlsY/",
     true,
     false
   ),
@@ -90,7 +90,7 @@ export const gridHomeData = [
     "HSBC",
     null,
     HsbcMentoringImg,
-    "/",
+    "/hsbc-mentoring-portal",
     true,
     false
   ),
@@ -101,7 +101,7 @@ export const gridHomeData = [
     "HSBC University",
     null,
     HsbcUniversityImg,
-    "/",
+    "/hsbc-university",
     true,
     false
   ),
@@ -145,7 +145,7 @@ export const gridHomeData = [
     "Waves",
     null,
     WavesImg,
-    "/",
+    "/waves",
     true,
     false
   ),
@@ -167,7 +167,7 @@ export const gridHomeData = [
     "Interesting design that caught our eye this week...",
     "green",
     null,
-    "/",
+    "https://www.behance.net/gallery/94203457/Guess-Voice-Mobile-app?tracking_source=curated_tools_xd",
     false,
     true
   ),
@@ -178,7 +178,7 @@ export const gridHomeData = [
     null,
     null,
     DiageoImg,
-    "/",
+    "/diageo-techcafe",
     true,
     false
   ),
@@ -189,7 +189,7 @@ export const gridHomeData = [
     "Agnovos",
     null,
     AgnovosImg,
-    "/",
+    "/agnovos",
     true,
     false
   ),
