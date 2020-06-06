@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 
+import styles from "./caseStudy.module.scss"
 import AgNovosImg from "../../images/work/agnovos.png"
 import hsbcMentoringImg from "../../images/work/HSBCMentoring.png"
 import bupaImg from "../../images/work/BupaTalent.png"
@@ -10,7 +10,6 @@ import ssyImg from "../../images/work/SSY.png"
 import waveImg from "../../images/work/Waves.png"
 import diageoWorkplaceImg from "../../images/work/DiageoWorkplace.png"
 
-import Section from "../../components/Section/Section"
 import CaseStudyCard from "./CaseStudyCard"
 
 const caseStudyData = [
@@ -65,7 +64,7 @@ const caseStudyData = [
 ]
 function CaseStudyList({ filterCase }) {
   return (
-    <ul>
+    <ul className={styles.list}>
       {filterCase !== ""
         ? caseStudyData
             .filter(item => item.type === filterCase)

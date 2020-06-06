@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
-import PageTitle from "../components/PageTiltle/PageTitle"
+
 import HeroImg from "../images/cases/ssy/hero.png"
 import ExampleImg1 from "../images/cases/ssy/img1.png"
 import ExampleImg2 from "../images/cases/ssy/img2.png"

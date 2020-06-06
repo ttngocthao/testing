@@ -1,6 +1,7 @@
 .sectionWrap {
   padding: 60px 10px;
-  //margin-top: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
 
   &:target {
     padding-top: 125px;

@@ -5,9 +5,14 @@
   padding: 10px;
   border: none;
   box-shadow: none;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
 
   &.orangeBtn {
     background-color: $mainOrange;
     color: white;
   }
+
+
 }

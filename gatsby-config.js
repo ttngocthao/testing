@@ -46,6 +46,10 @@ module.exports = {
       options: { path: `./src/images` },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: { path: `${__dirname}/public/images/`, name: `imgFromNetlify` },
+    },
+    {
       resolve: "gatsby-plugin-html-attributes",
       options: {
         lang: "en",
@@ -96,12 +100,7 @@ module.exports = {
         url: `https://nostalgic-curran-576267.netlify.app`, // required!
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-netlify-identity-widget",
-    // options: {
-    //   container: '#netlify-modal'
-    // }
-    // },
+
     `gatsby-transformer-remark`,
   ],
 }

@@ -3,9 +3,18 @@
 .inputWrap {
   padding-top: 20px;
 
+  // $breakpoint-tablet: 700px;
+
+  // @media (min-width: $breakpoint-tablet) {}
+
+  max-width: 700px;
+  margin: 0 auto;
+
   label {
     color: $darkGray;
   }
+
+
 
   label,
   input,
@@ -51,6 +60,17 @@
 }
 
 .form {
-  background-color: $whiteGray;
+
   padding: 20px 15px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.background {
+  background-color: $whiteGray;
+}
+
+.recaptcha {
+  max-width: 700px;
+  margin: 0 auto;
 }

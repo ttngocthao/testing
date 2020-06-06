@@ -206,25 +206,23 @@ $borderThickness: 3,
   }
 }
 
-// section:target {
-//   padding-top: 250px;
-//   margin-top: -250px;
-// }
-// #fact {
-  //   padding-top: 120px;
-  // }
+.float-left {
+  float: left;
+}
 
-  // #people {
-  //   // background-color: yellow;
-  //   padding-top: 120px;
-  // }
+.float-right {
+  float: right;
+}
 
-  // #clients {
-  //   // background-color: green;
-  //   padding-top: 120px;
-  // }
+.clear-float {
+  clear: both;
+}
 
-  // #testing,
-  // .testing {
-  //   height: 60px;
-  // }
+$widthList : 467;
+
+@each $width in $widthList {
+  .max-width--#{$width} {
+    max-width: $width * 1px;
+  }
+
+}

@@ -16,7 +16,7 @@ function Header() {
 
   return (
     <header className={styles.headerContent}>
-      <nav>
+      <nav className={styles.nav}>
         <section className={styles.navContent}>
           <Link to="/">
             <ImgCard

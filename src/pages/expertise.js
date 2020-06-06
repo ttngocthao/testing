@@ -35,7 +35,7 @@ function expertise({ location }) {
         id="branding"
       >
         <ImgCard
-          className="padding-bottom--5"
+          className="padding-bottom--5 max-width--467 float-right margin-left--15"
           alt="Branding projects"
           src={BrandingImgUrl}
         />
@@ -53,39 +53,42 @@ function expertise({ location }) {
       </Section>
       <section className="testing"></section>
       <Section
+        clearfloat
         title="Communications"
         titleColor="darkBlue"
         subTitle2="Enable, engage &#38; inspire"
         id="communications"
       >
         <ImgCard
-          className="padding-bottom--5"
+          className="padding-bottom--5 max-width--467 float-right margin-left--15 "
           src={CommunicationsImgUrl}
           alt="Communications projects"
         />
-
-        <p>
-          We’re experts in internal communications and employee engagement. From
-          initial positioning and planning, through concepts, inspirational
-          activation and ongoing support we have the team that can deliver
-          business changing solutions.
-        </p>
-        <p>
-          Engaged organisations are successful organisations and great internal
-          communication is at the heart of this. So whether you need to evolve
-          your culture, engage employees, develop learning capability, build
-          talent or communicate change, we can help.
-        </p>
+        <div>
+          <p>
+            We’re experts in internal communications and employee engagement.
+            From initial positioning and planning, through concepts,
+            inspirational activation and ongoing support we have the team that
+            can deliver business changing solutions.
+          </p>
+          <p>
+            Engaged organisations are successful organisations and great
+            internal communication is at the heart of this. So whether you need
+            to evolve your culture, engage employees, develop learning
+            capability, build talent or communicate change, we can help.
+          </p>
+        </div>
       </Section>
       <section className="testing"></section>
       <Section
+        clearfloat
         title="Digital"
         titleColor="green"
         subTitle2="Concept, solutioning, design, development, delivery &#38; support"
         id="digital"
       >
         <ImgCard
-          className="padding-bottom--5"
+          className="padding-bottom--5 max-width--467 float-right margin-left--15"
           src={DigitalImgUrl}
           alt="Digital projects"
         />

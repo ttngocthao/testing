@@ -2,6 +2,8 @@
 
 .section {
   padding: 70px 0 0;
+  max-width: 1000px;
+  margin: 0 auto;
 
   &:target {
     padding-top: 125px;

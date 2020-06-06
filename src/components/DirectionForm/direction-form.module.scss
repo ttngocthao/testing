@@ -25,6 +25,8 @@
     background-image: none;
     border: 1px solid #ccc;
     text-transform: uppercase;
+    max-width: 400px;
+    margin: 0 auto;
 
     &::placeholder {
       color: #ccc;

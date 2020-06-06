@@ -14,6 +14,7 @@ function Button({ orangeBtn, formSubmit, ...props }) {
         </button>
       ) : (
         <a
+          href="#"
           className={`${styles.btnWrap} ${orangeBtn && styles.orangeBtn} ${
             props.className ? props.className : ""
           }`}

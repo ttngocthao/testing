@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+
 import Layout from "../Layout/Layout"
 import ImgCard from "../ImgCard/ImgCard"
 import PageTitle from "../PageTiltle/PageTitle"

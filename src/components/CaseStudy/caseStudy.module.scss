@@ -1,8 +1,17 @@
 @import '../../styles/components/variables.scss';
 
+.list {
+  display: flex;
+  max-width: 1000px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
 .cardContainer {
-  max-width: 335px;
-  margin: 0 auto 20px;
+  max-width: 460px;
+  margin: 0 auto 5.5%;
 
   &:hover figcaption {
     opacity: 1;
@@ -31,14 +40,14 @@
 
 .title {
   font-size: 18px;
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
   font-weight: bold;
 }
 
 .caseImg {
   position: relative;
-  max-width: 335px;
+  max-width: 460px;
   max-height: 305px;
   overflow: hidden;
 
@@ -52,7 +61,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-
+    max-height: 305px;
     opacity: 0;
     transition: .3s cubic-bezier(.16, .85, .45, 1);
   }
@@ -71,5 +80,6 @@
   img {
     display: inline-block;
     transition: .3s cubic-bezier(.16, .85, .45, 1);
+    vertical-align: bottom;
   }
 }
