@@ -19,4 +19,13 @@ exports.handler = async event => {
   }
   console.log("msg", msg)
   console.log("sgMail", sgMail)
+  try {
+    console.log("in try block")
+    return {
+      statusCode: 200,
+      body: "Message sent",
+    }
+  } catch (error) {
+    console.log("error", error)
+  }
 }
