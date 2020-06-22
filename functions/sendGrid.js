@@ -21,6 +21,7 @@ exports.handler = async event => {
   console.log("sgMail", sgMail)
   try {
     console.log("in try block")
+    await sgMail.send(msg)
     return {
       statusCode: 200,
       body: "Message sent",
