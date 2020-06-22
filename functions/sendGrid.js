@@ -7,7 +7,7 @@ exports.handler = async event => {
     }
   }
   console.log("starting")
-  const data = JSON.parse(event.body)
+  const data = JSON.stringify(event.body)
   console.log("data", data)
   const { name } = data
   const sgMail = require("@sendgrid/mail")

@@ -12,9 +12,9 @@ const testSG = () => {
           fetch("/.netlify/functions/sendGrid", {
             method: "POST",
 
-            body: data,
+            body: JSON.stringify(data),
           })
-          console.log("data", data)
+          console.log("data from frontend", data)
         }}
       >
         <Form>
