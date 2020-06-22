@@ -7,7 +7,7 @@ exports.handler = async event => {
     }
   }
   console.log("starting")
-  const data = JSON.stringify(event.body)
+  const data = JSON.parse(event.body)
   console.log("data", data)
   const { name } = data
   const sgMail = require("@sendgrid/mail")
@@ -18,13 +18,16 @@ exports.handler = async event => {
     subject: "Sending with Twilio SendGrid is Fun",
     text: name,
   }
+  console.log("before try catch")
   try {
     await sgMail.send(msg)
+    console.log("trying to send")
     return {
       statusCode: 200,
       body: "Message sent",
     }
   } catch (err) {
+    console.log(err)
     return {
       statusCode: err.code,
       body: err.message,
