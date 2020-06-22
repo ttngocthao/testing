@@ -18,4 +18,5 @@ exports.handler = async event => {
     html: body,
   }
   console.log("msg", msg)
+  console.log("sgMail", sgMail)
 }
